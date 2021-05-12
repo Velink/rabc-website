@@ -1,9 +1,9 @@
-# Sanity Clean Content Studio
+RABC Website 
 
-Congratulations, you have now installed the Sanity Content Studio, an open source real-time content editing environment connected to the Sanity backend.
-
-Now you can do the following things:
-
-- [Read “getting started” in the docs](https://www.sanity.io/docs/introduction/getting-started?utm_source=readme)
-- [Join the community Slack](https://slack.sanity.io/?utm_source=readme)
-- [Extend and build plugins](https://www.sanity.io/docs/content-studio/extending?utm_source=readme)
+- This is a responsive and dynamic website created using HTML , CSS and Vanilla JavaScript 
+- The website makes use of the Google Maps JavaScript API 
+- Slick.js with jQuery is used for the image slider  
+- Integrated within this project is also a Facebook Page Plugin 
+- Browserify is also used in the development process 
+- Sanity.io is used as a Headless CMS 
+- Font Awesome is used for icons 
