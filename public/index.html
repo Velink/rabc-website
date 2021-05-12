@@ -4,11 +4,214 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="../app.js"></script>
-    <script src="../bundle.js"></script>
-    <title>Trying Out Sanity</title>
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/utilities.css">
+    <link rel="stylesheet" href="/styles/media-queries.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.css">
+    <script src="/scripts/app.js"></script>
+    <script src="/scripts/bundle.js"></script>
+    <title>RABC</title>
 </head>
 <body>
-    <div id="app">hello</div>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_GB/sdk.js#xfbml=1&version=v10.0" nonce="2yletauc"></script>
+    <!-- Navbar -->
+    <header class="header">
+        <div class="social-media-banner">
+            <h5>Follow Us:</h5> 
+            <a href="https://www.facebook.com/royalantwerpbc/?ref=page_internal" target="_blank"><i class="fab fa-facebook fa-sm"></i></a>
+            <a href=""><i class="fab fa-instagram fa-sm"></i></a>
+            <a href=""><i class="fab fa-linkedin fa-sm"></i></a>
+            <a href=""><i class="fab fa-youtube fa-sm"></i></a>
+        </div>
+
+        <nav class="navbar" id="navbar">            
+            <img src="/images/rabc-logo-cropped.png" alt="" width="200px">
+            <button  id="hamburger" class="hamburger">
+                <i class="fas fa-bars transition"></i>
+            </button>
+            <ul class="nav-ul" id="nav-ul">
+                <li><a href="/public/index.html"><span>Home</span></a></li>
+                <li class="drop-down-container">
+                        <a id="algemene-button">Algemene informatie</a>
+                        <ul id="algemene-ul">
+                            <li><a href="/public/boardandemployees.html">Bestuur en medewrkers</a></li>
+                            <li><a href="/public/join.html">Lid worden</a></li>
+                            <li><a href="/public/recognisedsportsclub.html">Erkende sportclub</a></li>
+                            <li><a href="/public/sportshalls.html">Sporthallen</a></li>
+                            <li><a href="/public/playingmoments.html">Speelmomenten</a></li>
+                        </ul>
+                        <!-- <div class="blocker-1" onclick="hideAlgemeneMenu()"></div> -->
+                </li>
+
+                <li class="drop-down-container">
+                    <a id="tournament-button">Toernie</a>
+                    <ul id="tournament-ul">
+                        <li><a href="/public/tournament.html">Internationaal toernooi RABC</a></li>
+                    </ul>       
+                </li>
+
+                <li class="drop-down-container">
+                    <a id="competition-button">Competitie</a>
+                    <ul id="competition-ul">
+                        <li><a href="competition.html#Heren">Heren</a></li>
+                        <li><a href="competition.html#Dames">Dames</a></li>
+                        <li><a href="competition.html#Gemengde">Gemengde</a></li>
+                    </ul>
+                </li>
+
+                <li class="drop-down-container">
+                    <a id="sponsors-button">Sponsors</a>
+                    <ul id="sponsors-ul">
+                        <li><a href="/public/sponsors.html">Hoofdsponsor</a></li>
+                        <li><a href="/public/sponsors.html">Andere sponsors</a></li>
+                        <li><a href="/public/sponsors.html">Sponsorformules</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Between Navbar and Intro-->
+
+    <div class="grey-separator">
+        <h4>Royal Antwerp Badminton Club</h4>
+    </div>
+
+      <!-- Image Slider -->
+      <div class="slide-container" id="slide-container">
+                <img src="/images/slider-img-1.jpg" alt="" height="250px">
+                <img src="/images/slider-img-3.jpg" alt="" height="250px">
+                <img src="/images/slider-img-7.jpg" alt="" height="250px">
+                <img src="/images/slider-img-9.jpg" alt="" height="250px">
+                <img src="/images/slider-img-11.jpg" alt="" height="250px">
+                <img src="/images/slider-img-12.jpg" alt="" height="250px">
+                <img src="/images/slider-img-15.jpeg" alt="" height="250px">
+                <img src="/images/slider-img-16.jpeg" alt="" height="250px">
+                <img src="/images/slider-img-17.jpeg" alt="" height="250px">
+                <img src="/images/slider-img-18.jpeg" alt="" height="250px">
+                <img src="/images/slider-img-20.jpeg" alt="" height="250px">
+
+          </div>
+      </div>
+
+      <!-- Slick Slider Script -->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.js"></script>
+      <script>
+          $(document).ready(function(){
+             $('.slide-container').slick({
+                 dots: true,
+                 autoplay: true,
+                 autoplaySpeed: 2000,
+                 infinite: true,
+                 slidesToShow: 5,
+                 pauseOnHover: false,
+                 dots: false,
+             })
+          });
+      </script>
+
+    <div class="below-slider">
+        <ul class="below-slider-links">
+            <li><a href="/public/join.html"><i class="fas fa-chevron-right"></i>Lid worden</a></li>
+            <li><a href="/public/sportshalls.html"><i class="fas fa-chevron-right"></i>Sporthallen</a></li>
+            <li><a href="/public/tournament.html"><i class="fas fa-chevron-right"></i>Toernooi</a></li>
+            <li><a href="/public/boardandemployees.html"><i class="fas fa-chevron-right"></i>Bestuur en medewerkers</a></li>
+
+        </ul>
+    </div>
+  
+    <!--Introduction -->
+    <section class="intro-section">
+        <div class="intro-text">
+            <h2>Welkom bij RABC</h2>
+            <h4>Mogen wij ons even voorstellen ?</h4>
+            <p>Royal Antwerp BC bestaat dit jaar 91 jaar en is tevens de oudste badmintonclub van Vlaanderen.</p>
+            <p>Zij is volledig onafhankelijk en stelt tot doel badminton bereikbaar te maken voor jong en oud, recreant of competitiespeler. Een zeer gerichte jeugdwerking en een brede waaier aan spelmogelijkheden zorgen hiervoor.</p>
+            <p>De club is aangesloten bij de Badminton Vlaanderen. Elk lid van onze club wordt eveneens lid gemaakt van deze Liga. Dit stelt de speler in de gelegenheid competitie te spelen en de verzekering is eveneens geregeld.</p>
+            <p>Onze club is een Vereniging Zonder Winstoogmerk. De inkomsten van de lidgelden worden besteed aan noodzakelijke kosten (huur zalen, materiaal, secretariaat, trainer,...) en aan activiteiten voor de leden zelf.</p>
+            <p>Meer info nodig? Contacteer gerust één van de leden van het bestuur.</p>
+            <!-- <button class="join-button"><a href=""><i class="far fa-edit"></i>lid worden</a></button> -->
+            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0vx61m_UTOcgSu7xjAz7ZDyistvSiV9DuDfhsnEKeldYOMg/viewform?c=0&w=1&includes_info_params=true" target="_blank"><span class="join-button"><i class="far fa-edit"></i>lid worden</span></a>
+        </div>
+    </section>
+
+
+    <!-- <div class="img-racb">
+        <img src="images/RABC.jpg" alt="" width="600px">
+    </div> -->
+    <section class="player-types">
+        <div class="grid-card"></div>
+        <div class="grid-card"></div>
+        <div class="grid-card"></div>
+    </section>
+
+    <!-- News Cards Section / FACEBOOK SECTION -->
+    <section class="news-cards">
+            <div class="grid-card-1">
+                <h3>Vind ons op Facebook!</h3>
+                <div id="fb-plugin" class="fb-page" data-href="https://www.facebook.com/royalantwerpbc/" data-tabs="timeline" data-width="300px" data-height="" data-small-header="true" data-adapt-container-width="" data-hide-cover="false"><blockquote cite="https://www.facebook.com/royalantwerpbc/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/royalantwerpbc/">Facebook</a></blockquote></div>
+            </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-grid-item">
+            <ul>
+                <li><a href="/public/boardandemployees.html">Bestuur en medewrkers</a></li>
+                <li><a href="/public/sportshalls.html">Sporthallen</a></li>
+                <li><a href="/public/join.html">Lid Worden</a></li>
+                <li><a href="/public/tournament.html">Toernie</a></li>
+                <li><a href="/public/playingmoments.html">Speelmomenten</a></li>
+            </ul>
+            </div>
+            <div class="footer-grid-item">
+                <ul>
+                    <li><a href="/public/competition.html">Competitie</a></li>
+                    <li><a href="/public/competition.html#Heren">Heren</a></li>
+                    <li><a href="/public/competition.html#Dames">Dames</a></li>
+                    <li><a href="/public/competition.html#Gemengde">Gemengde</a></li>
+                </ul>
+                </div>
+                <div class="footer-grid-item">
+                    <ul>
+                        <li><a href="/public/sponsors.html">Hoofdsponsor</a></li>
+                        <li><a href="/public/sponsors.html">Andere sponsors</a></li>
+                        <li><a href="/public/sponsors.html">Sponsorformules</a></li>
+                    </ul>
+                    </div>
+                    <div class="footer-grid-item">
+                        <ul>
+                            <li><a href="/public/recognisedsportsclub.html">Erkende Sportclub</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-grid-item-5">
+                        <h5>Royal Antwerp Badminton Club</h5>
+                        <div class="social-media-banner">
+                            <h5>Follow Us:</h5> 
+                            <a href="https://www.facebook.com/royalantwerpbc/?ref=page_internal" target="_blank"><i class="fab fa-facebook fa-sm"></i></a>
+                            <a href=""><i class="fab fa-instagram fa-sm"></i></a>
+                            <a href=""><i class="fab fa-linkedin fa-sm"></i></a>
+                            <a href=""><i class="fab fa-youtube fa-sm"></i></a>
+                        </div>
+                    </div>
+        </div>
+
+        <div class="sponsors-section">
+            <img class="sponsor-img-2" src="/images/logo_port_of_antwerp_color.png" alt="">
+            <img class="sponsor-img-4" src="/images/belvu logo.jpg" alt="">
+            <img class="sponsor-img-5" src="/images/vdk logo.png" alt="">
+            <img class="sponsor-img-3" src="/images/logo_print_300ppi.jpg" alt="">
+        </div>
+
+        <div class="bottom-separator"></div>
+
+    </footer>
+    <script src="/scripts/menus.js"></script>
 </body>
 </html>

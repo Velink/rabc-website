@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="stylesheet" href="/styles/utilities.css">
+    <link rel="stylesheet" href="/styles/media-queries.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <script src="/scripts/googleMaps.js"></script>
+    <title>Sports Halls</title>
+</head>
+<body>
+     <!-- Navbar -->
+     <header class="header">
+        <div class="social-media-banner">
+            <h5>Follow Us:</h5> 
+            <a href="https://www.facebook.com/royalantwerpbc/?ref=page_internal" target="_blank"><i class="fab fa-facebook fa-sm"></i></a>
+            <a href=""><i class="fab fa-instagram fa-sm"></i></a>
+            <a href=""><i class="fab fa-linkedin fa-sm"></i></a>
+            <a href=""><i class="fab fa-youtube fa-sm"></i></a>
+        </div>
+
+        <nav class="navbar" id="navbar">            
+            <img src="/images/rabc-logo-cropped.png" alt="" width="200px">
+            <button  id="hamburger" class="hamburger">
+                <i class="fas fa-bars transition"></i>
+            </button>
+            <ul class="nav-ul" id="nav-ul">
+                <li><a href="/public/index.html"><span>Home</span></a></li>
+                <li class="drop-down-container">
+                        <a id="algemene-button">Algemene informatie</a>
+                        <ul id="algemene-ul">
+                            <li><a href="/public/boardandemployees.html">Bestuur en medewrkers</a></li>
+                            <li><a href="/public/join.html">Lid worden</a></li>
+                            <li><a href="/public/recognisedsportsclub.html">Erkende sportclub</a></li>
+                            <li><a href="/public/sportshalls.html">Sporthallen</a></li>
+                            <li><a href="/public/playingmoments.html">Speelmomenten</a></li>
+                        </ul>
+                        <!-- <div class="blocker-1" onclick="hideAlgemeneMenu()"></div> -->
+                </li>
+
+                <li class="drop-down-container">
+                    <a id="tournament-button">Toernie</a>
+                    <ul id="tournament-ul">
+                        <li><a href="/public/tournament.html">Internationaal toernooi RABC</a></li>
+                    </ul>       
+                </li>
+
+                <li class="drop-down-container">
+                    <a id="competition-button">Competitie</a>
+                    <ul id="competition-ul">
+                        <li><a href="competition.html#Heren">Heren</a></li>
+                        <li><a href="competition.html#Dames">Dames</a></li>
+                        <li><a href="competition.html#Gemengde">Gemengde</a></li>
+                    </ul>
+                </li>
+
+                <li class="drop-down-container">
+                    <a id="sponsors-button">Sponsors</a>
+                    <ul id="sponsors-ul">
+                        <li><a href="/public/sponsors.html">Hoofdsponsor</a></li>
+                        <li><a href="/public/sponsors.html">Andere sponsors</a></li>
+                        <li><a href="/public/sponsors.html">Sponsorformules</a></li>
+                    </ul>
+                </li>
+
+            </ul>
+        </nav>
+    </header>
+       <!-- Between Navbar and Intro-->
+
+       <div class="grey-separator">
+        <h4>Royal Antwerp Badminton Club</h4>
+    </div>
+
+    <!-- Sports Halls -->
+    <section class="intro-section">
+        <div class="intro-text">
+           <h2>Royal Antwerp is actief in verschillende sporthallen in en rond Antwerpen. In deze lijst vindt u hier meer informatie over.</h2>
+        </div>
+    </section>
+
+    <section class="sports-news-cards">
+        <div class="grid-cards">
+            <div class="grid-card">
+                <h3>Stedelijke sporthal Kiel</h3>
+                <h5>Bekijk de sporthal hier.</h5>
+                <p>Adres: Emiel Vloorstraat 2020 Antwerpen</p>
+                <div id="map-1"></div>
+            </div>
+            <div class="grid-card">
+                <h3>Pius X-instituut</h3>
+                <h5>Bekijk de sporthal hier.</h5>
+                <p>Adres: Hof Van Tichelen 28 2020 Antwerpen</p>
+                <div id="map-2"></div>
+            </div>
+            <div class="grid-card">
+                <h3>Leonardo Lyceum</h3>
+                <h5>Bekijk de sporthal hier.</h5>
+                <p>Adres: Edegemsesteenweg 100 2610 Wilrijk</p>
+                <div id="map-3"></div>
+            </div>
+        </div>
+    </section>
+
+
+    <footer class="footer">
+        <div class="footer-grid">
+            <div class="footer-grid-item">
+            <ul>
+                <li><a href="">About us</a></li>
+                <li><a href="">General Information</a></li>
+                <li><a href="">Tournament</a></li>
+                <li><a href="">League</a></li>
+                <li><a href="">News</a></li>
+            </ul>
+            </div>
+            <div class="footer-grid-item">
+                <ul>
+                    <li><a href="">Tournament</a></li>
+                    <li><a href="">League</a></li>
+                    <li><a href="">News</a></li>
+                </ul>
+                </div>
+                <div class="footer-grid-item">
+                    <ul>
+                        <li><a href="">League</a></li>
+                        <li><a href="">News</a></li>
+                    </ul>
+                    </div>
+                    <div class="footer-grid-item">
+                        <ul>
+                            <li><a href="">About us</a></li>
+                            <li><a href="">General Information</a></li>
+                            <li><a href="">Tournament</a></li>
+                            <li><a href="">League</a></li>
+                            <li><a href="">News</a></li>
+                        </ul>
+                    </div>
+
+                    <div class="footer-grid-item-5">
+                        <h5>Royal Antwerp Badminton Club</h5>
+                        <div class="social-media-banner">
+                            <h5>Follow Us:</h5> 
+                            <a href="https://www.facebook.com/royalantwerpbc/?ref=page_internal" target="_blank"><i class="fab fa-facebook fa-sm"></i></a>
+                            <a href=""><i class="fab fa-instagram fa-sm"></i></a>
+                            <a href=""><i class="fab fa-linkedin fa-sm"></i></a>
+                            <a href=""><i class="fab fa-youtube fa-sm"></i></a>
+                        </div>
+                    </div>
+        </div>
+
+        <div class="sponsors-section">
+            <img class="sponsor-img-2" src="/images/logo_port_of_antwerp_color.png" alt="">
+            <img class="sponsor-img-4" src="/images/belvu logo.jpg" alt="">
+            <img class="sponsor-img-5" src="/images/vdk logo.png" alt="">
+            <img class="sponsor-img-3" src="/images/logo_print_300ppi.jpg" alt="">
+        </div>
+
+        <div class="bottom-separator"></div>
+
+    </footer>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsZ0rx4aEk6eegfEHbfAl2Z_IA8iY6ho4&callback=initMap&libraries=&v=weekly" async></script>
+    <script>  
+                /* Drop Down Menu UL-1 */ 
+                const hamburger = document.getElementById('hamburger'); 
+        const navUL = document.getElementById('nav-ul');
+        hamburger.addEventListener('click', () => {
+        navUL.classList.toggle('show');
+        hamburger.classList.toggle('flip');
+        navUL.classList.toggle('border-outline')
+        })
+
+        document.addEventListener("click", function(event){
+            if(event.target.closest('.navbar')) return
+            if(navUL.classList.contains('show')){
+            console.log(1);
+            navUL.classList.remove('show');
+            hamburger.classList.remove('flip');
+            navUL.classList.remove('border-outline')
+            } return
+        })
+
+        // /* Drop Down Menu UL-2 */ 
+        const algemeneUL = document.getElementById('algemene-ul')
+        const algemeneButton = document.getElementById('algemene-button') 
+        algemeneButton.addEventListener('click', () => {
+        algemeneButton.classList.toggle('border-outline')
+        algemeneUL.classList.toggle('show');
+        })
+
+        /* Closing Drop-Down Menu UL-2 When user clicks outside of Menu for Mobile Layout */ 
+        document.addEventListener("click", function(event){
+            if(event.target.closest('.drop-down-container')) return
+            if(algemeneUL.classList.contains('show')){
+            algemeneUL.classList.remove('show');
+            algemeneButton.classList.remove('border-outline')
+            } return
+        })
+
+        // /* Drop Down Menu UL-3 */ 
+        const tournamentUL = document.getElementById('tournament-ul')
+        const tournamentButton = document.getElementById('tournament-button') 
+        tournamentButton.addEventListener('click', () => {
+        tournamentButton.classList.toggle('border-outline')
+        tournamentUL.classList.toggle('show');
+        })
+
+        
+        /* Closing Drop-Down Menu UL-3 When user clicks outside of Menu for Mobile Layout */ 
+        document.addEventListener("click", function(event){
+            if(event.target.closest('.drop-down-container')) return
+            if(tournamentUL.classList.contains('show')){
+            tournamentUL.classList.remove('show');
+            tournamentButton.classList.remove('border-outline')
+            } return
+        })
+
+
+        // /* Drop Down Menu UL-4 */ 
+        const competitionUL = document.getElementById('competition-ul')
+        const competitionButton = document.getElementById('competition-button') 
+        competitionButton.addEventListener('click', () => {
+        competitionButton.classList.toggle('border-outline')
+        competitionUL.classList.toggle('show');
+        })
+
+        /* Closing Drop-Down Menu UL-4 When user clicks outside of Menu for Mobile Layout */ 
+        document.addEventListener("click", function(event){
+            if(event.target.closest('.drop-down-container')) return
+            if(competitionUL.classList.contains('show')){
+            competitionUL.classList.remove('show');
+            competitionButton.classList.remove('border-outline')
+            } return
+        })
+
+
+        /* Drop down Menu UL-5 */
+        const sponsorsUL = document.getElementById('sponsors-ul')
+        const sponsorsButton = document.getElementById('sponsors-button') 
+        sponsorsButton.addEventListener('click', () => {
+        sponsorsButton.classList.toggle('border-outline')
+        sponsorsUL.classList.toggle('show');
+        })
+
+        
+        /* Closing Drop-Down Menu UL-5 When user clicks outside of Menu for Mobile Layout */ 
+        document.addEventListener("click", function(event){
+            if(event.target.closest('.drop-down-container')) return
+            if(sponsorsUL.classList.contains('show')){
+            sponsorsUL.classList.remove('show');
+            sponsorsButton.classList.remove('border-outline')
+            } return
+        })
+
+        /* Hide Drop Down Menu 1 */
+        // function hideAlgemeneMenu() {
+        //     if(algemeneUL.classList.contains('show') == true){
+        //      algemeneUL.classList.toggle('show');
+        //     }
+        //     console.log(1);
+        // }
+    </script>
+</body>
+</html>

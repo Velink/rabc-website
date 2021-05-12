@@ -1,0 +1,286 @@
+/* Board and Employees Grid */
+.board-employees-grid{
+    display: grid;
+    gap: 30px;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    grid-template-columns: repeat(3, 300px);
+    grid-template-rows: repeat(2, auto);
+    width: 100%;
+    justify-content: center;
+}
+
+.grid-card img{
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+.board-employees-intro{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    margin-top: 1%;
+    text-align: center;
+}
+
+.board-employees-intro h3{
+    color: #e4002b;
+    margin-top: 1%;
+}
+
+/* Playing moments grid */
+
+.playing-moments-grid {
+    display: grid;
+    gap: 30px;
+    margin-top: 2%;
+    margin-bottom: 5%;
+    grid-template-columns: repeat(5, 300px);
+    grid-template-rows: repeat(2, auto);
+    width: 100%;
+    justify-content: center;
+}
+
+.playing-moments-grid .grid-card{
+    padding: 15%;
+}
+
+/*Useful links container-grid */
+
+.useful-links-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.useful-links-section h2{
+    margin: 0 auto;
+    margin-top: 5%;
+}
+
+.useful-links-container{
+    display: grid;
+    gap: 30px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    grid-template-columns: repeat(4, 300px);
+    grid-template-rows: repeat(1, 300px);
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.useful-links-container .grid-card{
+    position: relative;
+    height: 300px;
+    justify-content: center;
+}
+
+.useful-links-container .grid-card h3{
+    position: absolute;
+    margin-bottom: 50%;
+}
+
+.useful-links-container .grid-card img{
+    border-radius: 0;
+
+}
+
+/* Sports Hall Cards */
+.sports-news-cards{
+    display: flex;
+    text-align: center;
+    margin: 2% auto;
+    width: 100%;
+}
+
+.grid-cards {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 400px);
+    grid-template-rows: repeat(1, 400px);
+    margin-top: 2%;
+    margin-bottom: 4%;
+    gap: 3%;
+    justify-content: space-around;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-card {
+    display: flex;
+    flex-direction: column;
+    border: none;
+    padding: 5%;
+    width: 100%;
+    border-radius: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    text-align: center;
+    align-items: center;
+
+    transition: transform .4s ease-out;
+}
+
+.grid-card:hover{
+    transform: translate(0, -10px);
+}
+
+.grid-card h3{
+    padding-bottom: 5%;
+    color: #000000;
+}
+
+.grid-card h5{
+    padding-bottom: 5%;
+    color: #e4002b
+}
+
+.grid-card p {
+    padding-bottom: 5%;
+}
+
+#grid-card-3 h3{
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+/* Google Maps JavaScript API */
+
+#map-1 {
+    width: 100%;
+    height: 300px;
+    border-radius: 0;
+}
+
+#map-2 {
+    width: 100%;
+    height: 300px;
+}
+
+#map-3 {
+    width: 100%;
+    height: 300px;
+}
+
+
+/* Competition Groups */
+
+#Heren {
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#Heren h2 {
+    margin: 0 auto;
+}
+
+#list-drop{
+    display: flex;
+    margin: 0 auto;
+    white-space: nowrap;
+    align-items: center;
+    
+    justify-content: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+#list-drop i{
+    cursor: pointer;
+    padding-right: 10px;
+    transform: rotate(0deg);
+    transition: transform 1s linear;
+}
+
+#list-drop i.open{
+    transform: rotate(90deg);
+    transition: transform 1s linear;
+}
+
+#list-drop h2, h3{
+    cursor: pointer;
+}
+
+.toggle-button-2{
+    cursor: pointer;
+    display: flex;
+    border: none;
+    background-color: transparent;
+}
+
+.toggle-button-3{
+    cursor: pointer;
+    display: flex;
+    border: none;
+    background-color: transparent;
+}
+
+.toggle-button-4{
+    cursor: pointer;
+    display: flex;
+    border: none;
+    background-color: transparent;
+}
+
+.heren-container{
+    display:flex;
+    flex-direction: column;
+}
+
+.heren-container ul li{
+    list-style: none;
+    padding: 5px;
+}
+
+#heren-container ul{
+    margin: 0 auto;
+}
+
+#heren-container ul li{
+    padding: 10px;
+}
+
+.heren-container li{
+    text-align: center;
+}
+
+/* Styling the Icon for Competition Groups */
+.toggle-button-heren-sub{
+    border: none;
+    background-color: transparent;
+}
+
+.toggle-button-dames-sub{
+    border: none;
+    background-color: transparent;
+}
+
+.toggle-button-gemengde-sub{
+    border: none;
+    background-color: transparent;
+}
+
+/* Tournament Text */
+
+#tournament-intro-text{
+    margin-top: 2%;
+    margin-bottom: 20%;
+}
+
+/* Sponsor Text */
+.sponsor-section{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    justify-content: center;
+}
+
+.sponsor-section .intro-text{
+    margin: 0 auto;
+}
