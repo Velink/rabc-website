@@ -71,8 +71,11 @@
     margin-left: 10%;
 }
 
+.nav-ul .drop-down-container{
+    padding-left: 15%;
+}
+
 .navbar ul li{
-    padding: 0;
     list-style-type: none;  
 }
 
@@ -90,8 +93,11 @@
     color: #e4002b;
 }
 
-.navbar img{   
+.navbar img {   
     position: relative;
+}
+
+.logo-link{
     margin-left: 25%;
 }
 
@@ -105,7 +111,6 @@
     background:#e4002b;
     color: white;
     height: auto;
-    left: 0;
     
     
     display: flex;
@@ -119,8 +124,23 @@
     transition: all 0.4s ease;
 }
 
+.drop-down-container:nth-of-type(2) ul{
+    margin-right: -55px;
+    right: 0;
+}
+
+.drop-down-container:nth-of-type(3) ul{
+    margin-right: -80px;
+    right: 0;
+}
+
 .drop-down-container:nth-of-type(4) ul{
-    left: 0;
+    margin-right: -12px;
+    right: 0;
+}
+
+.drop-down-container:nth-of-type(5) ul{
+    margin-right: -35px;
     right: 0;
 }
 

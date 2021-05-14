@@ -24,10 +24,14 @@
         align-items: center;
     }
 
-    .navbar img{
+    .navbar img {   
         position: relative;
+    }
+    
+    .logo-link{
         margin: 0;
     }
+    
 
     /* Hamburger on navbar */
     .hamburger{
@@ -51,6 +55,10 @@
         width: 100%;
         height: auto;
         transform: translateX(-100%);
+    }
+
+    .nav-ul .drop-down-container{
+        padding: 0;
     }
 
     #nav-ul.show{
@@ -157,6 +165,26 @@
         opacity: 0;
         transform: translateY(0px);
         display: none;
+    }
+
+    .drop-down-container:nth-of-type(2) ul{
+        margin-right: 0px;
+        right: 0;
+    }
+    
+    .drop-down-container:nth-of-type(3) ul{
+        margin-right: 0px;
+        right: 0;
+    }
+    
+    .drop-down-container:nth-of-type(4) ul{
+        margin-right: 0px;
+        right: 0;
+    }
+    
+    .drop-down-container:nth-of-type(5) ul{
+        margin-right: 0px;
+        right: 0;
     }
 
     /* Grey RABC Separator Banner */
@@ -290,3 +318,511 @@
         transform: none;
     }
 } 
+
+@media (max-width: 1000px){
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+    /* Index Page */
+
+    .social-media-banner{
+        margin: 0;
+        padding-left: 0;
+        display: flex;
+        justify-content: center;
+    }
+
+    #slide-container{
+        border: none;
+    }
+
+    .navbar{
+        margin-top: 20px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .navbar img{
+        position: relative;
+        margin: 0;
+    }
+
+    /* Hamburger on navbar */
+    .hamburger{
+        display: block;
+        background-color: transparent;
+        border:0;
+        cursor: pointer;
+        font-size: 20px;
+    }
+
+    .hamburger:focus{
+        outline: none;
+    }
+
+    #nav-ul{
+        display: flex;
+        position: relative;
+        flex-direction: column;
+        text-align: center;
+        margin: 0;
+        width: 100%;
+        height: auto;
+        transform: translateX(-100%);
+    }
+
+    .nav-ul .drop-down-container{
+        padding: 0;
+    }
+
+    #nav-ul.show{
+        display: flex;
+        transform: translateX(0%);
+        background-color: #fff;
+    }
+
+    /* Add onClick Show sub-menu */
+    .navbar ul li{
+        cursor: pointer;
+    }
+
+    .navbar ul li a{
+        display: block;
+        padding: 15px;
+    }
+
+    /* On-click animation of hamburger */
+    .transition > svg {
+        -moz-transition: transform 1s linear;
+        -webkit-transition: transform 1s linear;
+        transition: transform 0.3s linear;
+    }
+    
+    .flip { /* rotate 90 deg */
+        -moz-transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        transform: rotate(90deg);
+    }
+
+    /* Sub-Menu 1 */
+    .navbar ul li:nth-of-type(2) ul.show{
+        display: flex;
+        position: relative;
+        z-index: 1000;
+        opacity: 1;
+        transform: translateY(5px);
+        pointer-events: all;
+    }
+
+    /* Border outline for all Sub-Menu Buttons */
+    .navbar ul li a.border-outline{
+        outline: 1px #e4002b solid;
+    }
+
+    .border-outline{ 
+        outline: 1px #e4002b solid;
+    }
+
+    /* Sub-Menu 2 */
+    .navbar ul li:nth-of-type(3) ul.show{
+        display: flex;
+        position: relative;
+        z-index: 1000;
+        opacity: 1;
+        transform: translateY(5px);
+        pointer-events: all;
+    }
+
+    /* Sub-Menu 3 */
+    .navbar ul li:nth-of-type(4) ul.show{
+        display: flex;
+        position: relative;
+        z-index: 1000;
+        opacity: 1;
+        transform: translateY(5px);
+        pointer-events: all;
+    }
+
+    /* Sub-Menu 4 */
+    .navbar ul li:nth-of-type(5) ul.show{
+        display: flex;
+        position: relative;
+        z-index: 1000;
+        opacity: 1;
+        transform: translateY(5px);
+        pointer-events: all;
+    }
+
+    /* close sub menu-1 */
+    /* .blocker-1 {
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        content: ' ';
+      } */
+
+    /* Remove Hover Effect from Desktop Layout */
+    .drop-down-container ul li a {
+        padding: 0;
+        padding: 10px;
+    }
+
+    .drop-down-container a:hover + ul{
+        opacity: 0;
+        transform: translateY(0px);
+        display: none;
+    }
+
+    .drop-down-container ul:hover{
+        opacity: 0;
+        transform: translateY(0px);
+        display: none;
+    }
+
+    
+    .drop-down-container:nth-of-type(2) ul{
+        margin-right: 0px;
+        right: 0;
+    }
+    
+    .drop-down-container:nth-of-type(3) ul{
+        margin-right: 0px;
+        right: 0;
+    }
+    
+    .drop-down-container:nth-of-type(4) ul{
+        margin-right: 0px;
+        right: 0;
+    }
+    
+    .drop-down-container:nth-of-type(5) ul{
+        margin-right: 0px;
+        right: 0;
+    }
+
+    /* Grey RABC Separator Banner */
+    
+    .grey-separator{
+        position: relative;
+        z-index: 10;
+    }
+
+    /* Below Slider Links */
+    .below-slider{
+        display: block;
+        height: 150px;
+        align-items: center;
+        position: relative;
+        z-index: 5;
+    }
+
+    .below-slider ul{
+        display: block;
+        flex-direction: column;
+        height: 100%;
+        padding-top: 20px;
+    }
+
+    .below-slider ul li{
+        margin-bottom: 10px;
+    }
+
+    .below-slider ul li a{
+        margin: 0;
+    }
+
+    /* Intro Section */
+    .intro-section{
+        width: 100%;
+    }
+
+    .intro-text{
+        width: 90%;
+    }
+
+    .intro-section h4{
+        padding: 5%;
+    }
+
+    .intro-section p{
+        margin-bottom: 5%;
+    }
+
+    /* Player Types */
+    .player-types{
+        display: flex;
+        flex-direction: column;
+        margin-top: 5%;
+    }
+
+    /* Facebook Section */
+    .news-cards{
+        width: 100%;
+        justify-content: center;
+        margin: 0 auto;
+    }
+
+    .news-cards .grid-card-1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-top: 5%;
+        margin-bottom: 5%;
+        width: 70%;
+        overflow: hidden;
+    }
+
+    .footer-grid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sponsors-section{
+        display: flex;
+    }
+
+    .sponsors-section img{
+        width: 20%;
+    }
+
+    /* Board Employees Page */
+    .board-employees-grid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Recognised Sports Club Page */
+    .useful-links-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Sports Hall Page */
+    .grid-cards{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .grid-cards .grid-card{
+        transition-property: none;
+        transform: none;
+    }
+
+    /* Playing Moments Page */
+    #playing-moments-grid{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #playing-moments-grid .grid-card{
+        transition-property: none;
+        transform: none;
+    }
+
+    /* Front Page disable card animation */
+    .player-types .grid-card{
+        transition-property: none;
+        transform: none;
+    }
+
+    /* Board Members Animation Disabled */
+    .board-employees-grid .grid-card{
+        transition-property: none;
+        transform: none;
+    }
+} 
+
+@media (max-width: 1200px){
+    *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+    }
+
+        /* Index Page */
+
+        .social-media-banner{
+            margin: 0;
+            padding-left: 0;
+            display: flex;
+            justify-content: center;
+        }
+    
+        #slide-container{
+            border: none;
+        }
+    
+        .navbar{
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+    
+        .navbar img{
+            position: relative;
+            margin: 0;
+        }
+    
+        /* Hamburger on navbar */
+        .hamburger{
+            display: block;
+            background-color: transparent;
+            border:0;
+            cursor: pointer;
+            font-size: 20px;
+        }
+    
+        .hamburger:focus{
+            outline: none;
+        }
+    
+        #nav-ul{
+            display: flex;
+            position: relative;
+            flex-direction: column;
+            text-align: center;
+            margin: 0;
+            width: 100%;
+            height: auto;
+            transform: translateX(-100%);
+        }
+    
+        .nav-ul .drop-down-container{
+            padding: 0;
+        }
+    
+        #nav-ul.show{
+            display: flex;
+            transform: translateX(0%);
+            background-color: #fff;
+        }
+    
+        /* Add onClick Show sub-menu */
+        .navbar ul li{
+            cursor: pointer;
+        }
+    
+        .navbar ul li a{
+            display: block;
+            padding: 15px;
+        }
+    
+        /* On-click animation of hamburger */
+        .transition > svg {
+            -moz-transition: transform 1s linear;
+            -webkit-transition: transform 1s linear;
+            transition: transform 0.3s linear;
+        }
+        
+        .flip { /* rotate 90 deg */
+            -moz-transform: rotate(90deg);
+            -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+        }
+    
+        /* Sub-Menu 1 */
+        .navbar ul li:nth-of-type(2) ul.show{
+            display: flex;
+            position: relative;
+            z-index: 1000;
+            opacity: 1;
+            transform: translateY(5px);
+            pointer-events: all;
+        }
+    
+        /* Border outline for all Sub-Menu Buttons */
+        .navbar ul li a.border-outline{
+            outline: 1px #e4002b solid;
+        }
+    
+        .border-outline{ 
+            outline: 1px #e4002b solid;
+        }
+    
+        /* Sub-Menu 2 */
+        .navbar ul li:nth-of-type(3) ul.show{
+            display: flex;
+            position: relative;
+            z-index: 1000;
+            opacity: 1;
+            transform: translateY(5px);
+            pointer-events: all;
+        }
+    
+        /* Sub-Menu 3 */
+        .navbar ul li:nth-of-type(4) ul.show{
+            display: flex;
+            position: relative;
+            z-index: 1000;
+            opacity: 1;
+            transform: translateY(5px);
+            pointer-events: all;
+        }
+    
+        /* Sub-Menu 4 */
+        .navbar ul li:nth-of-type(5) ul.show{
+            display: flex;
+            position: relative;
+            z-index: 1000;
+            opacity: 1;
+            transform: translateY(5px);
+            pointer-events: all;
+        }
+    
+        /* close sub menu-1 */
+        /* .blocker-1 {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            content: ' ';
+          } */
+    
+        /* Remove Hover Effect from Desktop Layout */
+        .drop-down-container ul li a {
+            padding: 0;
+            padding: 10px;
+        }
+    
+        .drop-down-container a:hover + ul{
+            opacity: 0;
+            transform: translateY(0px);
+            display: none;
+        }
+    
+        .drop-down-container ul:hover{
+            opacity: 0;
+            transform: translateY(0px);
+            display: none;
+        }
+    
+        
+        .drop-down-container:nth-of-type(2) ul{
+            margin-right: 0px;
+            right: 0;
+        }
+        
+        .drop-down-container:nth-of-type(3) ul{
+            margin-right: 0px;
+            right: 0;
+        }
+        
+        .drop-down-container:nth-of-type(4) ul{
+            margin-right: 0px;
+            right: 0;
+        }
+        
+        .drop-down-container:nth-of-type(5) ul{
+            margin-right: 0px;
+            right: 0;
+        }
+    
+
+}
