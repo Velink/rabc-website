@@ -1,4 +1,4 @@
-@media (max-width: 500px){
+@media (max-width: 650px){
     *{
         padding: 0;
         margin: 0;
@@ -100,6 +100,15 @@
         pointer-events: all;
     }
 
+    .navbar ul li:nth-of-type(2) ul li:nth-of-type(2).show{
+        display: flex;
+        position: relative;
+        z-index: 1001;
+        opacity: 1;
+        transform: translateY(5px);
+        pointer-events: all;
+    }
+
     /* Border outline for all Sub-Menu Buttons */
     .navbar ul li a.border-outline{
         outline: 1px #e4002b solid;
@@ -186,6 +195,39 @@
         margin-right: 0px;
         right: 0;
     }
+    /* Submenu inside Submenu for Joining */ 
+    .navbar ul li:nth-of-type(2) ul li:nth-of-type(2) ul{
+        margin-right: 0px;
+        right: 0;
+        margin-top: 0;
+        padding: 3%;
+    }
+
+    .navbar ul li:nth-of-type(2) ul li:nth-of-type(2) ul li:hover{
+        background-color: #fff;
+    }
+
+    /* ------------------------------------------------------------- */
+
+    .drop-down-container ul li:nth-of-type(2){
+        flex-direction: column;
+        width: auto;
+    }
+
+    .drop-down-container ul li:nth-of-type(2):hover{
+        background-color: #e4002b;
+    }
+
+    .drop-down-container ul li:nth-of-type(2) ul li{
+        background-color:#fff;
+    }
+
+    
+    .drop-down-container ul li:nth-of-type(2) ul li a{
+        color:#000;
+    }
+
+
 
     /* Grey RABC Separator Banner */
     
@@ -259,6 +301,8 @@
         overflow: hidden;
     }
 
+    /* Footer */
+
     .footer-grid{
         display: flex;
         flex-direction: column;
@@ -284,15 +328,24 @@
         flex-direction: column;
     }
 
+    .useful-links-container .grid-card{
+        width: 70%;
+    }
+
+    .useful-links-container .grid-card a img{
+        width: 90%;
+        margin-top: 10%;
+    }
+
+    .useful-links-container .grid-card h3{
+       margin-bottom: 50%;
+    }
+
     /* Sports Hall Page */
     .grid-cards{
         display: flex;
         flex-direction: column;
-    }
-
-    .grid-cards .grid-card{
-        transition-property: none;
-        transform: none;
+        width: 100%;
     }
 
     /* Playing Moments Page */
@@ -317,9 +370,10 @@
         transition-property: none;
         transform: none;
     }
+
 } 
 
-@media (max-width: 1000px){
+@media (min-width: 651px) and (max-width: 768px){
     *{
         padding: 0;
         margin: 0;
@@ -372,6 +426,8 @@
         width: 100%;
         height: auto;
         transform: translateX(-100%);
+
+        padding-bottom: 15px;
     }
 
     .nav-ul .drop-down-container{
@@ -417,6 +473,15 @@
         pointer-events: all;
     }
 
+    .navbar ul li:nth-of-type(2) ul li:nth-of-type(2).show{
+        display: flex;
+        position: relative;
+        z-index: 1001;
+        opacity: 1;
+        transform: translateY(5px);
+        pointer-events: all;
+    }
+
     /* Border outline for all Sub-Menu Buttons */
     .navbar ul li a.border-outline{
         outline: 1px #e4002b solid;
@@ -424,6 +489,10 @@
 
     .border-outline{ 
         outline: 1px #e4002b solid;
+    }
+
+    .border-outline2{
+        outline: 1px #fff solid;
     }
 
     /* Sub-Menu 2 */
@@ -505,6 +574,38 @@
         right: 0;
     }
 
+    /* Submenu inside Submenu for Joining */ 
+    .navbar ul li:nth-of-type(2) ul li:nth-of-type(2) ul{
+        margin-right: 0px;
+        right: 0;
+        margin-top: 0;
+        padding: 3%;
+    }
+
+    .navbar ul li:nth-of-type(2) ul li:nth-of-type(2) ul li:hover{
+        background-color: #fff;
+    }
+
+    /* ------------------------------------------------------------- */
+    
+    .drop-down-container ul li:nth-of-type(2){
+        flex-direction: column;
+        width: auto;
+    }
+
+    .drop-down-container ul li:nth-of-type(2):hover{
+        background-color: #e4002b;
+    }
+
+    .drop-down-container ul li:nth-of-type(2) ul li{
+        background-color:#fff;
+    }
+
+    
+    .drop-down-container ul li:nth-of-type(2) ul li a{
+        color:#000;
+    }
+
     /* Grey RABC Separator Banner */
     
     .grey-separator{
@@ -577,6 +678,8 @@
         overflow: hidden;
     }
 
+    /* Footer */
+
     .footer-grid{
         display: flex;
         flex-direction: column;
@@ -602,15 +705,19 @@
         flex-direction: column;
     }
 
+    .useful-links-container .grid-card{
+        width: 60%;
+    }
+
     /* Sports Hall Page */
     .grid-cards{
         display: flex;
         flex-direction: column;
+        width: 50%;
     }
 
-    .grid-cards .grid-card{
-        transition-property: none;
-        transform: none;
+    .grid-card{
+        margin-bottom: 10%;
     }
 
     /* Playing Moments Page */
@@ -635,9 +742,15 @@
         transition-property: none;
         transform: none;
     }
+
+    /* Facebook Plugin Front Page */
+    .fb-grid-card-1{
+        margin-top: 4%;
+        margin-bottom: 5%;
+    }
 } 
 
-@media (max-width: 1200px){
+@media (min-width: 768px) and (max-width: 1100px){
     *{
         padding: 0;
         margin: 0;
@@ -648,9 +761,8 @@
 
         .social-media-banner{
             margin: 0;
-            padding-left: 0;
+            padding-left: 25%;
             display: flex;
-            justify-content: center;
         }
     
         #slide-container{
@@ -660,7 +772,6 @@
         .navbar{
             margin-top: 20px;
             display: flex;
-            justify-content: space-around;
             align-items: center;
         }
     
@@ -676,6 +787,7 @@
             border:0;
             cursor: pointer;
             font-size: 20px;
+            margin-left: 30%;
         }
     
         .hamburger:focus{
@@ -691,6 +803,8 @@
             width: 100%;
             height: auto;
             transform: translateX(-100%);
+
+
         }
     
         .nav-ul .drop-down-container{
@@ -731,6 +845,15 @@
             display: flex;
             position: relative;
             z-index: 1000;
+            opacity: 1;
+            transform: translateY(5px);
+            pointer-events: all;
+        }
+
+        .navbar ul li:nth-of-type(2) ul li:nth-of-type(2).show{
+            display: flex;
+            position: relative;
+            z-index: 1001;
             opacity: 1;
             transform: translateY(5px);
             pointer-events: all;
@@ -823,6 +946,284 @@
             margin-right: 0px;
             right: 0;
         }
-    
 
+        /* Submenu inside Submenu for Joining */ 
+        .navbar ul li:nth-of-type(2) ul li:nth-of-type(2) ul{
+            margin-right: 0px;
+            right: 0;
+            margin-top: 0;
+            padding: 3%;
+        }
+
+        .navbar ul li:nth-of-type(2) ul li:nth-of-type(2) ul li:hover{
+            background-color: #fff;
+        }
+
+        /* ------------------------------------------------------------- */
+        
+        .drop-down-container ul li:nth-of-type(2){
+            flex-direction: column;
+            width: auto;
+        }
+
+        .drop-down-container ul li:nth-of-type(2):hover{
+            background-color: #e4002b;
+        }
+
+        .drop-down-container ul li:nth-of-type(2) ul li{
+            background-color:#fff;
+        }
+
+        
+        .drop-down-container ul li:nth-of-type(2) ul li a{
+            color:#000;
+        }
+}
+
+
+@media (min-width: 1101px) and (max-width: 1400px){
+    .social-media-banner{
+        padding-left: 10%;
+    }
+    .logo-link{
+        margin-left: 10%;
+    }
+}
+
+
+/* Sports Halls Wider Layout */ 
+@media(min-width: 768px) and (max-width: 1300px){
+    .grid-cards{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+
+    .grid-card{
+        margin-bottom: 10%;
+    }
+}
+
+
+/* Playing Moments Page */
+@media(min-width: 769px) and (max-width: 1650px){
+    #playing-moments-grid{
+        display: grid;
+        grid-template-columns: repeat(2, 350px);
+        gap: 10px;
+    }
+
+    #playing-moments-grid .grid-card{
+        transition-property: none;
+        transform: none;
+    }
+}
+
+/* Board Members Page */
+@media(min-width: 660px) and (max-width: 1050px){
+    .board-employees-grid{
+        display: grid;
+        grid-template-columns: repeat(2 ,300px);
+    }
+}
+
+/* 1330 768 Recognised Sports Club Tablet Layout */
+@media(min-width: 769px) and (max-width: 1330px){
+    .useful-links-container{
+        display: grid;
+        grid-template-columns: repeat(2, 300px);
+    }
+} 
+
+/* Contact Us Page */
+@media(max-width: 800px){
+    .contactus-details{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-info{
+        margin-bottom:10%;
+    }
+}
+
+/* Tournament Page */
+@media(max-width: 1200px){
+    #tournament-link{
+        white-space: normal;
+        margin: 0;
+    }
+}
+
+/* Footer at Tablet Layouts */
+@media(min-width: 769px) and (max-width: 1100px){
+    .footer-grid{
+        display: grid;
+        grid-template-columns: repeat(4, 150px);
+        grid-template-rows: repeat(1, 100px);
+        margin: 0 auto;
+        text-align: center;
+    }
+
+    .footer-grid .footer-grid-item{
+        width: 70%;
+    }
+
+    .footer-grid .footer-grid-item ul li{
+        text-align: center;
+    }
+
+    .footer-grid-item-5{
+        margin-right: -320%;
+    }
+    
+    .footer-grid-item-5 h5{
+        margin-bottom: 3%;
+    }
+
+    .sponsors-section{
+        display: flex;
+    }
+
+    .sponsors-section img{
+        width: 10%;
+    }
+}
+
+
+/* Join Youth Page */
+@media(max-width: 1300px){
+    #join-youth-intro{
+        font-size: 16px;
+    }
+
+    #youth-sporthall-cards{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #youth-sporthall-cards .grid-card{
+        width: 100%;
+        max-width: 500px; 
+        margin: 0 auto;
+        margin-bottom: 2%;
+    }
+
+    #youth-join-button{
+        margin-top: 7%;
+        margin-bottom: 7%;
+    }
+
+    #youth-playing-card{
+        padding-top: 5%;
+    }
+}
+
+@media(max-width: 500px){
+    #join-youth-intro{
+        font-size: 14px;
+        width: 70%;
+        padding-bottom: 10%;
+    }
+
+    #youth-playing-card{
+        padding-top: 10%;
+    }
+}
+
+/* Join Competitive Page */
+@media(max-width: 1300px){
+    #join-competitive-intro{
+        font-size: 16px;
+        padding-bottom: 5%;
+    }
+
+    #competitive-sporthall-cards{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #competitive-sporthall-cards .grid-card{
+        width: 100%;
+        min-width: 250px;
+        max-width: 500px; 
+        margin: 0 auto;
+        margin-bottom: 2%;
+    }
+
+    #competition-playing-card{
+        padding-top: 5%;
+    }
+}
+
+@media(max-width: 500px){
+    #join-competitive-intro{
+        font-size: 14px;
+        padding-bottom: 10%;
+    }
+
+    #youth-join-button{
+        margin-bottom: 10%;
+    }
+
+    #competition-playing-card{
+        padding-top: 10%;
+    }
+}
+
+/* Recreation Page */
+@media(max-width: 1300px){
+
+    #join-recreation-intro{
+        padding-top: 5%;
+        padding-bottom: 5%;
+    }
+
+    #join-recreation-intro h2{
+        padding-top: 1%;
+        margin-bottom: 1%;
+    }
+
+    #recreation-sporthall-cards{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #recreation-sporthall-cards .grid-card{
+        width: 100%;
+        max-width: 500px; 
+        margin: 0 auto;
+        margin-bottom: 2%;
+    }
+
+    #youth-join-button{
+        margin-top: 7%;
+        margin-bottom: 7%;
+    }
+
+    #recreation-playing-card{
+        padding-top: 5%;
+    }
+}
+
+@media(max-width: 500px){
+    #join-recreation-intro{
+        font-size: 14px;
+        padding-bottom: 10%;
+    }
+
+    #youth-join-button{
+        margin-bottom: 10%;
+    }
+
+    #recreation-playing-card{
+        padding-top: 10%;
+    }
+}
+
+@media(min-width: 651px) and (max-width: 1200px){
+    .player-types{
+        display: grid;
+        grid-template-columns: repeat(1, auto);
+    }
 }

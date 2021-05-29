@@ -10,7 +10,7 @@ import sponsor from './sponsor'
 import group from './group'
 import playerType from './playerType'
 import tournamentInfo from './tournamentInfo'
-
+import pdfFiles from './pdfFiles'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -27,5 +27,6 @@ export default createSchema({
     tournamentInfo,
     sponsor,
     playerType,
+    pdfFiles,
   ]),
 })

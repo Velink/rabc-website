@@ -31,16 +31,24 @@
             <ul class="nav-ul" id="nav-ul">
                 <li><a href="/public/index.html"><span>Home</span></a></li>
                 <li class="drop-down-container">
-                        <a id="algemene-button">Algemene informatie</a>
-                        <ul id="algemene-ul">
-                            <li><a href="/public/boardandemployees.html">Bestuur en medewrkers</a></li>
-                            <li><a href="/public/join.html">Lid worden</a></li>
-                            <li><a href="/public/recognisedsportsclub.html">Erkende sportclub</a></li>
-                            <li><a href="/public/sportshalls.html">Sporthallen</a></li>
-                            <li><a href="/public/playingmoments.html">Speelmomenten</a></li>
-                        </ul>
-                        <!-- <div class="blocker-1" onclick="hideAlgemeneMenu()"></div> -->
-                </li>
+                    <a id="algemene-button">Algemene informatie</a>
+                    <ul id="algemene-ul">
+                        <li><a href="/public/boardandemployees.html">Bestuur en medewrkers</a></li>
+                        <li id="lid-worden" class="lid-worden">
+                           <a id="join-button">Lid worden</a>
+                           <ul id="join-ul">
+                               <li><a href="/public/joinYouth.html">Jeugd</a></li>
+                               <li><a href="/public/joinCompetitive.html">Competitie</a></li>
+                               <li><a href="/public/joinRecreation.html">Recreanten</a></li>
+                               <li><a href="/public/join.html">Lid Worden</a></li>
+                           </ul>
+                        </li>
+                        <li><a href="/public/recognisedsportsclub.html">Erkende sportclub</a></li>
+                        <li><a href="/public/sportshalls.html">Sporthallen</a></li>
+                        <li><a href="/public/playingmoments.html">Speelmomenten</a></li>
+                    </ul>
+                    <!-- <div class="blocker-1" onclick="hideAlgemeneMenu()"></div> -->
+            </li>
 
                 <li class="drop-down-container">
                     <a id="tournament-button">Toernie</a>
@@ -67,6 +75,9 @@
                     </ul>
                 </li>
 
+                <li class="drop-down-container">
+                    <a id="contactus-button" href="/public/contactus.html">Contact Us</a>
+                </li>
             </ul>
         </nav>
     </header>

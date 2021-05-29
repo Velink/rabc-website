@@ -38,7 +38,15 @@
                         <a id="algemene-button">Algemene informatie</a>
                         <ul id="algemene-ul">
                             <li><a href="/public/boardandemployees.html">Bestuur en medewrkers</a></li>
-                            <li><a href="/public/join.html">Lid worden</a></li>
+                            <li id="lid-worden" class="lid-worden">
+                               <a id="join-button">Lid worden</a>
+                               <ul id="join-ul">
+                                   <li><a href="/public/joinYouth.html">Jeugd</a></li>
+                                   <li><a href="/public/joinCompetitive.html">Competitie</a></li>
+                                   <li><a href="/public/joinRecreation.html">Recreanten</a></li>
+                                   <li><a href="/public/join.html">Lid Worden</a></li>
+                               </ul>
+                            </li>
                             <li><a href="/public/recognisedsportsclub.html">Erkende sportclub</a></li>
                             <li><a href="/public/sportshalls.html">Sporthallen</a></li>
                             <li><a href="/public/playingmoments.html">Speelmomenten</a></li>
@@ -70,7 +78,10 @@
                         <li><a href="/public/sponsors.html">Sponsorformules</a></li>
                     </ul>
                 </li>
-
+                
+                <li class="drop-down-container">
+                    <a id="contactus-button" href="/public/contactus.html">Contact Us</a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -83,17 +94,17 @@
 
       <!-- Image Slider -->
       <div class="slide-container" id="slide-container">
-                <img src="/images/slider-img-1.jpg" alt="" height="250px">
-                <img src="/images/slider-img-3.jpg" alt="" height="250px">
-                <img src="/images/slider-img-7.jpg" alt="" height="250px">
-                <img src="/images/slider-img-9.jpg" alt="" height="250px">
-                <img src="/images/slider-img-11.jpg" alt="" height="250px">
-                <img src="/images/slider-img-12.jpg" alt="" height="250px">
-                <img src="/images/slider-img-15.jpeg" alt="" height="250px">
-                <img src="/images/slider-img-16.jpeg" alt="" height="250px">
-                <img src="/images/slider-img-17.jpeg" alt="" height="250px">
-                <img src="/images/slider-img-18.jpeg" alt="" height="250px">
-                <img src="/images/slider-img-20.jpeg" alt="" height="250px">
+                <img src="/images/slider-img-1.jpg" alt="" height="300px">
+                <img src="/images/slider-img-3.jpg" alt="" height="300px">
+                <img src="/images/slider-img-7.jpg" alt="" height="300px">
+                <img src="/images/slider-img-9.jpg" alt="" height="300px">
+                <img src="/images/slider-img-11.jpg" alt="" height="300px">
+                <img src="/images/slider-img-12.jpg" alt="" height="300px">
+                <img src="/images/slider-img-15.jpeg" alt="" height="300px">
+                <img src="/images/slider-img-16.jpeg" alt="" height="300px">
+                <img src="/images/slider-img-17.jpeg" alt="" height="300px">
+                <img src="/images/slider-img-18.jpeg" alt="" height="300px">
+                <img src="/images/slider-img-20.jpeg" alt="" height="300px">
 
           </div>
       </div>
@@ -152,7 +163,7 @@
             <p>Onze club is een Vereniging Zonder Winstoogmerk. De inkomsten van de lidgelden worden besteed aan noodzakelijke kosten (huur zalen, materiaal, secretariaat, trainer,...) en aan activiteiten voor de leden zelf.</p>
             <p>Meer info nodig? Contacteer gerust één van de leden van het bestuur.</p>
             <!-- <button class="join-button"><a href=""><i class="far fa-edit"></i>lid worden</a></button> -->
-            <a href="https://docs.google.com/forms/d/e/1FAIpQLSf0vx61m_UTOcgSu7xjAz7ZDyistvSiV9DuDfhsnEKeldYOMg/viewform?c=0&w=1&includes_info_params=true" target="_blank"><span class="join-button"><i class="far fa-edit"></i>lid worden</span></a>
+            <a href="/public/join.html"><span class="join-button"><i class="far fa-edit"></i>lid worden</span></a>
         </div>
     </section>
 
@@ -168,9 +179,11 @@
 
     <!-- News Cards Section / FACEBOOK SECTION -->
     <section class="news-cards">
-            <div class="grid-card-1">
+            <div class="fb-grid-card-1">
                 <h3>Vind ons op Facebook!</h3>
-                <div id="fb-plugin" class="fb-page" data-href="https://www.facebook.com/royalantwerpbc/" data-tabs="timeline" data-width="300px" data-height="" data-small-header="true" data-adapt-container-width="" data-hide-cover="false"><blockquote cite="https://www.facebook.com/royalantwerpbc/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/royalantwerpbc/">Facebook</a></blockquote></div>
+                <div class="facebook-plugin-container">
+                    <div id="fb-plugin" class="fb-page" data-href="https://www.facebook.com/royalantwerpbc/" data-tabs="timeline" data-width="300px" data-height="" data-small-header="true" data-adapt-container-width="" data-hide-cover="false"><blockquote cite="https://www.facebook.com/royalantwerpbc/" class="fb-xfbml-parse-ignore"><a href="https://www.facebook.com/royalantwerpbc/">Facebook</a></blockquote></div>
+                </div>
             </div>
     </section>
 

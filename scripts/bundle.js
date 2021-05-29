@@ -66,29 +66,93 @@ fetchEmployeeImage();
 /* Join Information */ 
 const joinInformationQuery = '*[_type == "joinInformation"] | order(paragraphNumber)';
 
+
 function fetchJoinInformation(){
-    let j = 1;
-    client.fetch(joinInformationQuery).then(response => {
-        const html = response.map(user =>{
-            for (let i = 0; i < user.information.length; i++) {
-              const introText = user.information[i].children[0].text;
-              if(i == 0){
-                const htmlRender = `<h2>${introText}</h2>` 
-                document.querySelector(`#intro-text-${j}`).insertAdjacentHTML('beforeend', htmlRender);   
-              } else { 
-                const htmlRender = `<p>${introText}</p>` 
-                document.querySelector(`#intro-text-${j}`).insertAdjacentHTML('beforeend', htmlRender);   
-              }
+  client.fetch(joinInformationQuery).then(response => {
+      let j = 0;
+          console.log(response);
+          for (let i = 0; i < response[2].information.length; i++) {
+            const introText = response[2].information[i].children[0].text;
+            if(i == 0){
+              const htmlRender = `<h2>${introText}</h2>` 
+              document.querySelector(`#intro-text-1`).insertAdjacentHTML('beforeend', htmlRender);   
+            } else { 
+              const htmlRender = `<p>${introText}</p>` 
+              document.querySelector(`#intro-text-1`).insertAdjacentHTML('beforeend', htmlRender);   
             }
-        })
-        j++;  
-    })
-    .catch(error=> {
-      console.log(error);
-    })
+          }  
+          j++;
+  }).catch(error=> {
+    console.log(error);
+  })
 }
 
 fetchJoinInformation();
+
+/* Join Youth Information */
+function fetchJoinYouthInformation(){
+  client.fetch(joinInformationQuery).then(response => {
+          console.log(response);
+          for (let i = 0; i < response[3].information.length; i++) {
+            const introText = response[3].information[i].children[0].text;
+            if(i == 0){
+              const htmlRender = `<h2>${introText}</h2>` 
+              document.querySelector(`#join-youth-intro`).insertAdjacentHTML('beforeend', htmlRender);   
+            } else { 
+              const htmlRender = `<p>${introText}</p>` 
+              document.querySelector(`#join-youth-intro`).insertAdjacentHTML('beforeend', htmlRender);   
+            }
+          }  
+  }).catch(error=> {
+    console.log(error);
+  })
+}
+
+fetchJoinYouthInformation();
+
+
+/* Join Competitive Information */
+function fetchJoinCompetitiveInformation(){
+  client.fetch(joinInformationQuery).then(response => {
+          console.log(response);
+          for (let i = 0; i < response[4].information.length; i++) {
+            const introText = response[4].information[i].children[0].text;
+            if(i == 0){
+              const htmlRender = `<h2>${introText}</h2>` 
+              document.querySelector(`#join-competitive-intro`).insertAdjacentHTML('beforeend', htmlRender);   
+            } else { 
+              const htmlRender = `<p>${introText}</p>` 
+              document.querySelector(`#join-competitive-intro`).insertAdjacentHTML('beforeend', htmlRender);   
+            }
+          }  
+  }).catch(error=> {
+    console.log(error);
+  })
+}
+
+fetchJoinCompetitiveInformation();
+
+/* Join Recreation Information */
+function fetchJoinRecreationInformation(){
+  client.fetch(joinInformationQuery).then(response => {
+          console.log(response);
+          for (let i = 0; i < response[5].information.length; i++) {
+            const introText = response[5].information[i].children[0].text;
+            if(i == 0){
+              const htmlRender = `<h2>${introText}</h2>` 
+              document.querySelector(`#join-recreation-intro`).insertAdjacentHTML('beforeend', htmlRender);   
+            } else { 
+              const htmlRender = `<p>${introText}</p>` 
+              document.querySelector(`#join-recreation-intro`).insertAdjacentHTML('beforeend', htmlRender);   
+            }
+          }  
+  }).catch(error=> {
+    console.log(error);
+  })
+}
+
+fetchJoinRecreationInformation();
+
 
 
 /* Competition Group Query - Heren */
@@ -273,24 +337,26 @@ function hideFunctionH5(){
 const playingMomentsQuery = '*[_type == "playingCard"] | order(cardNumber)';
 
 function fetchPlayingMoments(){
-    let j = 1;
     client.fetch(playingMomentsQuery).then(response => {
-        const html = response.map(user =>{
-            var introText = [];
-            for (let i = 0; i < user.information.length; i++) {
-              introText[i] = user.information[i].children[0].text;  
-            }
-            const htmlRender = `
-            <div class="grid-card">
-            <h3>${introText[0]}</h3>
-            <h5>${introText[1]}</h5>
-            <h5>${introText[2]}</h5>
-            <p>${introText[3]}</p>
-            <p>${introText[4]}</p>
-            </div>` 
-            document.querySelector(`#playing-moments-grid`).insertAdjacentHTML('beforeend', htmlRender); 
-        })
-        j++;  
+        for(let j = 0; j < response.length; j++){
+          var introText = [];
+          console.log(response);
+          for (let i = 0; i < response[j].information.length; i++) {
+            introText[i] = response[j].information[i].children[0].text;  
+          }
+          const htmlRender = `
+          <div class="grid-card">
+          <h3>${introText[0]}</h3>
+          <h5>${introText[1]}</h5>
+          <h5>${introText[2]}</h5>
+          <p>${introText[3]}</p>
+          <p>${introText[4]}</p>
+          </div>` 
+
+           
+           document.querySelector(`#playing-moments-grid`).insertAdjacentHTML('beforeend', htmlRender); 
+  
+        }
     })
     .catch(error=> {
       console.log(error);
@@ -298,6 +364,108 @@ function fetchPlayingMoments(){
 }
 
 fetchPlayingMoments();
+
+
+/* Youth Playing Moment Card */
+const playingMomentsQuery2 = '*[_type == "playingCard"] | order(cardNumber)';
+
+function fetchPlayingMoments2(){
+    client.fetch(playingMomentsQuery2).then(response => {
+        for(let j = 0; j < response.length; j++){
+          var introText = [];
+          console.log(response);
+          for (let i = 0; i < response[j].information.length; i++) {
+            introText[i] = response[j].information[i].children[0].text;  
+          }
+          const htmlRender = `
+          <div class="grid-card">
+          <h3>${introText[0]}</h3>
+          <p>${introText[1]}</p>
+          <p>${introText[2]}</p>
+          <p>${introText[3]}</p>
+          <p>${introText[4]}</p>
+          <p>${introText[5]}</p>
+          <p>${introText[6]}</p>
+          </div>` 
+
+           if(j == 5){
+              document.querySelector(`#youth-playing-card`).insertAdjacentHTML('beforeend', htmlRender); 
+           }
+        }
+    })
+    .catch(error=> {
+      console.log(error);
+    })
+}
+
+fetchPlayingMoments2();
+
+/* Competition Playing Card */
+
+const playingMomentsQuery3 = '*[_type == "playingCard"] | order(cardNumber)';
+
+function fetchPlayingMoments3(){
+    client.fetch(playingMomentsQuery3).then(response => {
+        for(let j = 5; j < response.length; j++){
+          var introText = [];
+          console.log(response);
+          for (let i = 0; i < response[j].information.length; i++) {
+            introText[i] = response[j].information[i].children[0].text;  
+          }
+          const htmlRender = `
+          <div class="grid-card">
+          <h3>${introText[0]}</h3>
+          <p>${introText[1]}</p>
+          <p>${introText[2]}</p>
+          <p>${introText[3]}</p>
+          <p>${introText[4]}</p>
+          </div>` 
+
+        if(j == 6){
+            document.querySelector(`#competition-playing-card`).insertAdjacentHTML('beforeend', htmlRender); 
+         }
+        }
+    })
+    .catch(error=> {
+      console.log(error);
+    })
+}
+
+fetchPlayingMoments3();
+
+/* Recreation Playing Card */
+
+const playingMomentsQuery4 = '*[_type == "playingCard"] | order(cardNumber)';
+
+function fetchPlayingMoments4(){
+    client.fetch(playingMomentsQuery3).then(response => {
+        for(let j = 0; j < response.length; j++){
+          var introText = [];
+          console.log(response);
+          for (let i = 0; i < response[j].information.length; i++) {
+            introText[i] = response[j].information[i].children[0].text;  
+          }
+          const htmlRender = `
+          <div class="grid-card">
+          <h3>${introText[0]}</h3>
+          <p>${introText[1]}</p>
+          <p>${introText[2]}</p>
+          <p>${introText[3]}</p>
+          <p>${introText[4]}</p>
+          </div>` 
+
+        if( j ==  7){
+            document.querySelector(`#recreation-playing-card`).insertAdjacentHTML('beforeend', htmlRender); 
+         }
+        }
+    })
+    .catch(error=> {
+      console.log(error);
+    })
+}
+
+fetchPlayingMoments4();
+
 
 
 /* Tournament Information */ 
@@ -361,6 +529,9 @@ const playerTypeQuery = '*[_type == "playerType"] | order(cardNumber)';
 function fetchPlayerType(){
     let j = 1;
     let playerText = [];
+    let youthLink = '/public/joinYouth.html';
+    let competitiveLink = '/public/joinCompetitive.html';
+    let recreationLink = '/public/joinRecreation.html'
     client.fetch(playerTypeQuery).then(response => {
         const html = response.map(user =>{
           for(let i = 0; i < user.information.length; i++){
@@ -370,6 +541,9 @@ function fetchPlayerType(){
           }
           j++;  
         })
+        document.getElementById('youth-learn-more').setAttribute("href", youthLink);
+        document.getElementById('competitive-learn-more').setAttribute("href", competitiveLink);
+        document.getElementById('recreation-learn-more').setAttribute("href", recreationLink);
     })
     .catch(error=> {
       console.log(error);
@@ -377,6 +551,61 @@ function fetchPlayerType(){
 }
 
 fetchPlayerType();
+
+
+/* Sending Message Form */
+
+// document.querySelector('#contactus').addEventListener("submit", submitForm);
+
+// function submitForm(e){
+//   e.preventDefault();
+
+//   //Get Input Values
+//   let name = document.querySelector("#firstName").value;
+//   let email = document.querySelector("#email").value;
+//   let message = document.querySelector("#message").value;
+
+//   document.querySelector("#contactus").reset();
+
+//   sendEmail(name, email, message);
+// }
+
+// //Send Email info
+// function sendEmail(name, email, message){
+//     Email.send({
+//       Host: "smtp.gmail.com",
+//       Username: 'velinkalenderski@gmail.com',
+//       Password: 'tycoon97',
+//       To: 'velinkalenderski@hotmail.co.uk',
+//       From: 'velinkalenderski@gmail.com',
+//       Subject: `${name} sent you a message`,
+//       Body: `Name: ${name} <br/> Email: ${email} <br/> Message: ${message}`
+//     }).then((message) => alert("Message sent successfully"))
+// }
+
+
+/* Query for PDF Files */ 
+const pdfFileQuery = '*[_type == "pdfFiles"]';
+
+function fetchPdfFile(){
+  client.fetch(pdfFileQuery).then(response => {
+      console.log(response);
+      const html = response.map(user =>{
+        console.log(user);
+        let pdfRef = response[0].pdfFile.asset._ref;
+        const [_file, id, extension] = pdfRef.split('-');
+        const downloadUrl = `https://cdn.sanity.io/files/bs4sdm8j/production/${id}.${extension}`;
+        console.log(downloadUrl);
+        document.getElementById('pdf-brochure-link').setAttribute("href", downloadUrl);
+      })
+  })
+  .catch(error=> {
+    console.log(error);
+  })
+}
+
+fetchPdfFile();
+
 
 
 },{"@sanity/client":18}],2:[function(require,module,exports){

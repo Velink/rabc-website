@@ -96,6 +96,12 @@
     width: 100%;
 }
 
+#youth-halls-title{
+    text-align: center;
+    margin: 2% auto;
+    margin-top: 4%;
+}
+
 .grid-cards {
     display: grid;
     width: 100%;
@@ -159,6 +165,12 @@
     height: 300px;
 }
 
+#map-2b{
+    height: 300px;
+    width: 30%;
+    margin: 0 auto;
+}
+
 #map-3 {
     width: 100%;
     height: 300px;
@@ -210,6 +222,7 @@
     cursor: pointer;
     display: flex;
     border: none;
+    outline: 0;
     background-color: transparent;
 }
 
@@ -217,6 +230,7 @@
     cursor: pointer;
     display: flex;
     border: none;
+    outline: 0;
     background-color: transparent;
 }
 
@@ -224,6 +238,7 @@
     cursor: pointer;
     display: flex;
     border: none;
+    outline: 0;
     background-color: transparent;
 }
 
@@ -252,16 +267,19 @@
 /* Styling the Icon for Competition Groups */
 .toggle-button-heren-sub{
     border: none;
+    outline: 0;
     background-color: transparent;
 }
 
 .toggle-button-dames-sub{
     border: none;
+    outline: 0;
     background-color: transparent;
 }
 
 .toggle-button-gemengde-sub{
     border: none;
+    outline: 0;
     background-color: transparent;
 }
 
@@ -283,4 +301,295 @@
 
 .sponsor-section .intro-text{
     margin: 0 auto;
+}
+
+
+/* Contact Us Page */
+#contactus{
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+#contactus h2{
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 1%;
+}
+
+.contactus-details{
+    display: flex;
+    margin: 0 auto;
+}
+
+.form-info{
+    padding-top: 5%;
+    white-space: nowrap;
+    margin-left: 10%;
+}
+
+.form-info img{
+    padding-top: 10%;
+}
+
+.form-info h4{
+    color: #424242;
+    padding-top: 5%;
+}
+
+.form-info h5{
+    padding-top: 5%;
+}
+
+.contactus-form{
+    display: flex;
+    flex-direction: column;
+    width: auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+
+    padding: 10%;
+    border: none;
+    border-radius: 25px;
+    box-shadow: rgb(0 0 0 / 20%) 0px 4px 8px 0px;
+}
+
+.contactus-form label{
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 13px;
+}
+
+.contactus-form input{
+    margin-bottom: 25px;
+    width: 100%;
+    padding: 10px;
+    outline: none;
+    border-width: 1px;
+
+}
+
+.contactus-form textarea{
+    resize: vertical;
+    outline: none;
+}
+
+.contactus-form button{
+    width: 100%;
+    margin: 10px auto;
+    margin-top: 15px;
+
+    padding: 12px 24px;
+    font-size: 18px;
+    background-color: #e4002b;
+    color: #fff;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+.contactus-form button:hover{
+    background-color: #424242;
+}
+
+#status{
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    padding: 10px;
+    margin: 0 auto;
+    border-radius: 8px;
+}
+
+#status.success{
+    background-color: rgb(211, 250, 153);
+    animation: status 4s ease forwards;
+}
+
+#status.error{
+    background-color: rgb(250,129,92);
+    animation: status 4s ease forwards;
+    color: white;
+}
+
+@keyframes status{
+    0%{
+        opacity: 1;
+        pointer-events: all;
+    }
+    90% {
+        opacity: 1;
+        pointer-events: all;
+    }
+    100%{
+        opacity: 0;
+        pointer-events: none;
+    }
+}
+
+
+/* Join US Page Form */
+.member-form-container{
+    display: flex;
+    flex-direction: column;
+    width: 10%;
+    margin: 0 auto;
+}
+
+/* Youth Join Page */
+.youth-join-section{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#join-youth-intro{
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 4%;
+    margin-bottom: 2%;
+
+    max-width: 700px;
+}
+
+#join-youth-intro h2{
+    padding-bottom: 2%;
+}
+
+#youth-join-button{
+    margin: 0 auto;
+    white-space: nowrap;
+    margin-top: 1%;
+    text-decoration: none;
+}
+
+#youth-playing-card{
+    display: flex;
+}
+
+#playing-moments-title{
+    margin: 2% auto;
+    margin-top: 5%;
+}
+
+#youth-playing-card .grid-card{
+    width: auto;
+    margin: 0 auto;
+    margin-top: 3%;
+    padding: 2%;
+}
+
+#youth-sports-hall{
+    width: auto;
+    margin: 2% auto;
+}
+
+/* Join Competitive Page */
+#join-competitive-intro{
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+#join-competitive-intro h2{
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+#competition-playing-card{
+    display: flex;
+    margin: 3% auto;
+    margin-left: 2%;
+    margin-right: 2%;
+}
+
+#competition-playing-card .grid-card{
+    margin: 0 auto;
+    width: auto;
+}
+
+
+#competition-playing-card .grid-card{
+    margin: 0 auto;
+    width: auto;
+}
+
+
+/* Iframe Form */
+
+.google-form-container{
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    padding-top: 150%; /* 16:9 Aspect Ratio (divide 9 by 16 = 0.5625) */
+}
+
+#iframe-form{
+    display: flex;
+    margin: 0 auto;
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+}
+
+/* Brochure Join Page */
+.pdf-container{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    margin-bottom: 2%;
+}
+
+.pdf-container a{
+    text-decoration: none;
+    color: #000000;
+    padding-bottom: 2%;
+    padding-top: 2%;
+    align-self: center;
+}
+
+.pdf-link-container{
+    padding-top: 1%;
+}
+
+/* Recreation Page */
+#join-recreation-intro{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 2%;
+    margin-bottom: 3%;
+}
+
+#join-recreation-intro h2{
+        padding-top: 1%;
+        margin-bottom: 2%;
+}
+
+#recreation-moments-title{
+    margin: 2% auto;
+    text-align: center;
+    margin-top: 4%;
+}
+
+#recreation-playing-card{
+    display: flex;
+    width: auto;
+    margin: 0 auto;
+    
+    margin-top: 4%;
 }

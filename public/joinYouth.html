@@ -5,12 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
-    <link rel="stylesheet" href="/styles/utilities.css">
-    <link rel="stylesheet" href="/styles/media-queries.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+    <link rel="stylesheet" href="/styles/media-queries.css">
+    <link rel="stylesheet" href="/styles/utilities.css">
     <script src="/scripts/googleMaps.js"></script>
-    <script src="/scripts/menus.js"></script>
-    <title>Sports Halls</title>
+    <script src="/scripts/bundle.js"></script>
+    <script src="/scripts/app.js"></script>
+    <title>Join Youth</title>
 </head>
 <body>
      <!-- Navbar -->
@@ -80,21 +81,26 @@
             </ul>
         </nav>
     </header>
-       <!-- Between Navbar and Intro-->
 
-       <div class="grey-separator">
+    <!-- Between Navbar and Intro-->
+
+    <div class="grey-separator">
         <h4>Royal Antwerp Badminton Club</h4>
     </div>
+    
+    <!-- Youth Join Intro Text-->
+    <div id="join-youth-intro"></div>
+    <section class="youth-join-section">
 
-    <!-- Sports Halls -->
-    <section class="intro-section">
-        <div class="intro-text">
-           <h2>Royal Antwerp is actief in verschillende sporthallen in en rond Antwerpen. In deze lijst vindt u hier meer informatie over.</h2>
-        </div>
-    </section>
-
+    <!-- Join Button -->
+    <a id="youth-join-button" href="/public/join.html" target="_blank"><span class="join-button"><i class="far fa-edit"></i>lid worden</span></a>
+    <!-- Youth playing Card-->
+    <!-- <h2 id="playing-moments-title">Speelmomenten</h2> -->
+    <div id="youth-playing-card" class="youth-playing-card"></div>
+    <!-- Sports Hall -->
+    <h2 id="youth-halls-title">Sporthallen</h2>
     <section class="sports-news-cards">
-        <div class="grid-cards">
+        <div class="grid-cards" id="youth-sporthall-cards">
             <div class="grid-card">
                 <h3>Stedelijke sporthal Kiel</h3>
                 <h5>Bekijk de sporthal hier.</h5>
@@ -115,7 +121,6 @@
             </div>
         </div>
     </section>
-
 
     <footer class="footer">
         <div class="footer-grid">
@@ -173,6 +178,7 @@
         <div class="bottom-separator"></div>
 
     </footer>
+    <script src="/scripts/menus.js"></script>
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDsZ0rx4aEk6eegfEHbfAl2Z_IA8iY6ho4&callback=initMap&libraries=&v=weekly" async></script>
 </body>
 </html>

@@ -34,6 +34,23 @@
      } return
  })
 
+ /* Drop Down Menu Ul-2 Sub Menu from LI-2 */
+ const joinUL = document.getElementById('join-ul')
+ const joinButton = document.getElementById('join-button') 
+ joinButton.addEventListener('click', () => {
+ joinButton.classList.toggle('border-outline2')
+ joinUL.classList.toggle('show');
+ })
+
+ document.addEventListener("click", function(event){
+    if(event.target.closest('.lid-worden')) return
+    if(joinUL.classList.contains('show')){
+    joinUL.classList.remove('show');
+    joinButton.classList.remove('border-outline2')
+    } return
+})
+
+
  // /* Drop Down Menu UL-3 */ 
  const tournamentUL = document.getElementById('tournament-ul')
  const tournamentButton = document.getElementById('tournament-button') 

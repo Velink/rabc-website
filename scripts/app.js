@@ -269,28 +269,30 @@ function hideFunctionH5(){
 const playingMomentsQuery = '*[_type == "playingCard"] | order(cardNumber)';
 
 function fetchPlayingMoments(){
-    let j = 1;
-    client.fetch(playingMomentsQuery).then(response => {
-        const html = response.map(user =>{
-            var introText = [];
-            for (let i = 0; i < user.information.length; i++) {
-              introText[i] = user.information[i].children[0].text;  
-            }
-            const htmlRender = `
-            <div class="grid-card">
-            <h3>${introText[0]}</h3>
-            <h5>${introText[1]}</h5>
-            <h5>${introText[2]}</h5>
-            <p>${introText[3]}</p>
-            <p>${introText[4]}</p>
-            </div>` 
-            document.querySelector(`#playing-moments-grid`).insertAdjacentHTML('beforeend', htmlRender); 
-        })
-        j++;  
-    })
-    .catch(error=> {
-      console.log(error);
-    })
+  client.fetch(playingMomentsQuery).then(response => {
+      for(let j = 0; j < response.length; j++){
+        var introText = [];
+        console.log(response);
+        for (let i = 0; i < response[j].information.length; i++) {
+          introText[i] = response[j].information[i].children[0].text;  
+        }
+        const htmlRender = `
+        <div class="grid-card">
+        <h3>${introText[0]}</h3>
+        <h5>${introText[1]}</h5>
+        <h5>${introText[2]}</h5>
+        <p>${introText[3]}</p>
+        <p>${introText[4]}</p>
+        </div>` 
+
+         
+          document.querySelector(`#playing-moments-grid`).insertAdjacentHTML('beforeend', htmlRender); 
+          document.querySelector(`#youth-playing-card`).insertAdjacentHTML('beforeend', htmlRender); 
+      }
+  })
+  .catch(error=> {
+    console.log(error);
+  })
 }
 
 fetchPlayingMoments();
@@ -375,8 +377,7 @@ function fetchPlayerType(){
 fetchPlayerType();
 
 
-
-
+/* Sending Message Form */
 
 
 
