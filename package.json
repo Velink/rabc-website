@@ -25,7 +25,8 @@
     "prop-types": "^15.7",
     "react": "^17.0",
     "react-dom": "^17.0",
-    "requirejs": "^2.3.6"
+    "requirejs": "^2.3.6",
+    "server": "^1.0.33"
   },
   "devDependencies": {}
 }
