@@ -3,12 +3,13 @@
   "private": true,
   "version": "1.0.0",
   "description": "",
-  "main": "package.json",
+  "main": "server.js",
   "author": "Velin Kalenderski <velinkalenderski@hotmail.co.uk>",
   "license": "UNLICENSED",
   "scripts": {
-    "start": "sanity start",
-    "build": "sanity build"
+    "start": "node server.js",
+    "build": "sanity build",
+    "postinstall": "npm run build"
   },
   "keywords": [
     "sanity"
@@ -22,11 +23,15 @@
     "@sanity/default-login": "^2.10.5",
     "@sanity/desk-tool": "^2.10.4",
     "@sanity/vision": "^2.10.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
     "prop-types": "^15.7",
     "react": "^17.0",
     "react-dom": "^17.0",
     "requirejs": "^2.3.6",
     "server": "^1.0.33"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "nodemon": "^2.0.7"
+  }
 }
