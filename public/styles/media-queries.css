@@ -371,6 +371,11 @@
         transform: none;
     }
 
+    .fb-grid-card-1{
+        margin-top: 70px;
+        margin-bottom: 70px;
+    }
+
 } 
 
 @media (min-width: 651px) and (max-width: 768px){
@@ -732,6 +737,10 @@
     }
 
     /* Front Page disable card animation */
+    .player-types{
+        margin-bottom: 5%;
+    }
+
     .player-types .grid-card{
         transition-property: none;
         transform: none;
@@ -1097,6 +1106,11 @@
         font-size: 16px;
     }
 
+    #join-youth-intro{
+        margin: 0 auto;
+        width: 80%;
+    }
+
     #youth-sporthall-cards{
         display: flex;
         flex-direction: column;
@@ -1138,6 +1152,11 @@
         padding-bottom: 5%;
     }
 
+    #join-competitive-intro p{
+        margin: 0 auto;
+        width: 80%;
+    }
+
     #competitive-sporthall-cards{
         display: flex;
         flex-direction: column;
@@ -1177,6 +1196,11 @@
     #join-recreation-intro{
         padding-top: 5%;
         padding-bottom: 5%;
+    }
+
+    #join-recreation-intro p{
+        margin: 0 auto;
+        width: 80%;
     }
 
     #join-recreation-intro h2{

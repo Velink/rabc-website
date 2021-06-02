@@ -12,6 +12,9 @@
 .body {
     font-family: 'Roboto', sans-serif;
     overflow-x: hidden;
+
+    min-height: 100vh;
+    height: auto;
 }
 
 .header{
