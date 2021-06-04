@@ -11,6 +11,7 @@ import group from './group'
 import playerType from './playerType'
 import tournamentInfo from './tournamentInfo'
 import pdfFiles from './pdfFiles'
+import introInfo from './introInfo.js'
 
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
@@ -28,5 +29,6 @@ export default createSchema({
     sponsor,
     playerType,
     pdfFiles,
+    introInfo,
   ]),
 })

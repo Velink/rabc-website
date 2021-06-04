@@ -258,6 +258,8 @@
     text-align: center;
     width: 50%;
     margin-top: 1%;
+    
+    margin: 0 auto;
 }
 
 #intro-text-1{
@@ -270,12 +272,16 @@
 }
 
 .intro-text h4 {
-    color: #e4002b
+    color: #e4002b;
+    margin-bottom: 2%;
 }
 
 .intro-text p {
      padding-top: 1%;
      padding-bottom: 1%;
+
+     word-spacing: 4px;
+     line-height: 35px;
 }
 
 .intro-text ul li{

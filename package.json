@@ -24,6 +24,7 @@
     "@sanity/desk-tool": "^2.10.4",
     "@sanity/vision": "^2.10.5",
     "dotenv": "^10.0.0",
+    "emailjs-com": "^2.6.4",
     "express": "^4.17.1",
     "prop-types": "^15.7",
     "react": "^17.0",

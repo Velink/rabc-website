@@ -10,6 +10,43 @@ const client = sanityClient({
   useCdn: false,
 })
 
+/* Index Intro Information */
+const introInformationQuery = '*[_type == "introInformation"] | order(paragraphNumber)';
+
+function fetchIntroInformation(){
+
+
+  client.fetch(introInformationQuery).then(response => {
+          const html = response.map(user =>{
+            console.log(response);
+            for (let i = 0; i < user.information.length; i++) {
+              for (let j = 0; j < user.information[i].children.length; j++) {
+              const introText = user.information[i].children[j].text;
+                if(i == 0){
+                  const htmlRender = introText; 
+                  document.querySelector(`#intro-text-title`).insertAdjacentHTML('beforeend', htmlRender);   
+                } 
+                else if ( i == 1 && j == 0)
+                { 
+                  const htmlRender = introText;
+                  document.querySelector(`#intro-text-subtitle`).insertAdjacentHTML('beforeend', htmlRender);   
+                }  
+                else 
+                { 
+                  const htmlRender = introText;
+                  console.log(htmlRender);
+                  document.querySelector(`#intro-text-p`).insertAdjacentHTML('beforeend', introText);   
+                }   
+              }
+            }  
+          })
+  }).catch(error=> {
+    console.log(error);
+  })
+}
+
+fetchIntroInformation();
+
 
 /* Board Employee Information */
 const boardEmployeeInformation = '*[_type == "person"] | order(positionNumber)';
@@ -63,7 +100,6 @@ fetchEmployeeImage();
 
 /* Join Information */ 
 const joinInformationQuery = '*[_type == "joinInformation"] | order(paragraphNumber)';
-
 
 function fetchJoinInformation(){
   client.fetch(joinInformationQuery).then(response => {
