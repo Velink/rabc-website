@@ -7,3 +7,4 @@ RABC Website
 - Browserify is also used in the development process 
 - Sanity.io is used as a Headless CMS 
 - Font Awesome is used for icons 
+- Server.js is set up using Express - and static files are server using Express middleware 
