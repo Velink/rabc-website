@@ -220,6 +220,7 @@
 
     #join-ul{
         width: 100%;
+        margin-bottom: 5px;
     }
 
     .drop-down-container ul li:nth-of-type(2) ul li{
