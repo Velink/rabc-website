@@ -218,13 +218,18 @@
         background-color: #e4002b;
     }
 
+    #join-ul{
+        width: 100%;
+    }
+
     .drop-down-container ul li:nth-of-type(2) ul li{
-        background-color:#fff;
+        background-color:#e4002b;
+        
     }
 
     
     .drop-down-container ul li:nth-of-type(2) ul li a{
-        color:#000;
+        color:#fff;
     }
 
 
@@ -240,7 +245,6 @@
     .below-slider{
         display: block;
         height: 150px;
-        align-items: center;
         position: relative;
         z-index: 5;
     }
@@ -250,6 +254,8 @@
         flex-direction: column;
         height: 100%;
         padding-top: 20px;
+        
+        width: 100%;
     }
 
     .below-slider ul li{
@@ -625,6 +631,7 @@
         align-items: center;
         position: relative;
         z-index: 5;
+
     }
 
     .below-slider ul{
@@ -640,6 +647,7 @@
 
     .below-slider ul li a{
         margin: 0;
+
     }
 
     /* Intro Section */
@@ -986,6 +994,10 @@
         
         .drop-down-container ul li:nth-of-type(2) ul li a{
             color:#000;
+        }
+
+        .below-slider-links{
+            width: 100%;
         }
 }
 
