@@ -13,7 +13,15 @@ export default {
             title: "Number",
             name: "groupNumber",
             type: "number"
-          }
+          },
+          {
+            title: "Group image",
+            name: "Image",
+            type: "image",
+            options: {
+              hotspot: true // <-- Defaults to false
+            }
+          },
         ],
         orderings: [
           {

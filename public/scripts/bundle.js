@@ -14,8 +14,6 @@ const client = sanityClient({
 const introInformationQuery = '*[_type == "introInformation"] | order(paragraphNumber)';
 
 function fetchIntroInformation(){
-
-
   client.fetch(introInformationQuery).then(response => {
           const html = response.map(user =>{
             console.log(response);
@@ -187,8 +185,6 @@ function fetchJoinRecreationInformation(){
 
 fetchJoinRecreationInformation();
 
-
-
 /* Competition Group Query - Heren */
 const competitionGroupQuery = '*[_type == "group"] | order(groupNumber)';
 
@@ -196,6 +192,7 @@ function fetchHeren() {
     let j = 1;
     client.fetch(competitionGroupQuery).then(response => {
       const html = response.map(user =>{
+        console.log(response);
             for (let i = 0; i < user.text.length; i++) {
             const textArray = user.text[i].children.map(result => {
                 return `
@@ -213,6 +210,37 @@ function fetchHeren() {
 }
 
 fetchHeren();
+
+/* Competition Group Fetch Images */
+function fetchGroupImage() {
+  client.fetch(competitionGroupQuery).then(response => {
+    for (let j = 0; j < response.length; j++) {
+      let user = response[j];
+      if(user.hasOwnProperty('Image') == true){
+        let imgProp = user.Image.asset._ref;
+        let imgRef = imgProp.slice(6);
+        let imgRefP1 = imgRef.substring(0, imgRef.length - 4);
+        if(imgProp.indexOf('-jpg') == -1){
+          let imgRefP2 = imgRefP1.concat('.png');
+          let groupImage = `https://cdn.sanity.io/images/bs4sdm8j/production/${imgRefP2}`;
+          document.getElementById(`group-img-${j}`).src = groupImage;
+        } else {
+          let imgRefP2 = imgRefP1.concat('.jpg');
+          let groupImage = `https://cdn.sanity.io/images/bs4sdm8j/production/${imgRefP2}`;
+          document.getElementById(`group-img-${j}`).src = groupImage;
+        }
+      } else {
+        var element = document.getElementById(`group-img-${j}`)
+        element.classList.toggle("remove-image");
+      }
+    } 
+})
+.catch(error=> {
+  console.log(error);
+})
+}
+
+fetchGroupImage();
 
 /* Hide Competition Group List Mixed */
 function hideFunction4(){
@@ -516,7 +544,6 @@ function fetchTournamentInformation(){
             <h2>${introText[0]}</h2>
             <h4>${introText[1]}</h4>
             <p>${introText[2]}</p>
-            <a id="tournament-link" href="" target="_blank">${introText[3]}</a>
             ` 
             document.querySelector(`#tournament-intro-text`).insertAdjacentHTML('beforeend', htmlRender); 
             document.getElementById('tournament-link').setAttribute("href", introText[3]);

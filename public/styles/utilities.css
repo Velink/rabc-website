@@ -588,3 +588,23 @@
     
     margin-top: 4%;
 }
+
+/* Grid Card Width */ 
+.gc-width{
+    width: 30%;
+    margin: 0 auto;
+}
+
+/* Toggle Class Remove Image for Competition Groups */ 
+.remove-image{
+    display: none;
+}
+
+/* Social Media Banner Trophy */
+#sb-trophy{
+    color: #fff;
+}
+
+#sb-trophy:hover{
+    color: #424242;
+}
