@@ -536,17 +536,26 @@ const tournamentInformationQuery = '*[_type == "tournamentInfo"]';
 function fetchTournamentInformation(){
     client.fetch(tournamentInformationQuery).then(response => {
         const html = response.map(user =>{
-            var introText = [];
+          console.log(user);
             for (let i = 0; i < user.information.length; i++) {
-              introText[i] = user.information[i].children[0].text;  
+              for(let j = 0; j < user.information[i].children.length; j++){
+                const introText = user.information[i].children[j].text;  
+                const htmlRender = introText;
+                let k = 0;
+                  if(user.information[i].markDefs.length > 0 && user.information[i].markDefs[0]._type === 'link'){
+                    const htmlRender = `<a id=link-${k}>${introText}</a>`
+                    document.querySelector(`#tournament-intro-text`).insertAdjacentHTML('beforeend', htmlRender);
+                    document.getElementById(`link-${k}`).setAttribute("href", introText);
+                    document.getElementById(`link-${k}`).setAttribute("target", "_blank");
+                    k++;
+                }
+
+                else if(user.information[i].markDefs.length <= 0){
+                    document.querySelector(`#tournament-intro-text`).insertAdjacentHTML('beforeend', htmlRender); 
+                }
+                console.log(introText);
+              }
             }
-            const htmlRender = `
-            <h2>${introText[0]}</h2>
-            <h4>${introText[1]}</h4>
-            <p>${introText[2]}</p>
-            ` 
-            document.querySelector(`#tournament-intro-text`).insertAdjacentHTML('beforeend', htmlRender); 
-            document.getElementById('tournament-link').setAttribute("href", introText[3]);
         })
     })
     .catch(error=> {
