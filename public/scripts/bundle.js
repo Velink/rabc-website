@@ -408,11 +408,11 @@ function fetchPlayingMoments(){
           }
           const htmlRender = `
           <div class="grid-card">
-          <h3>${introText[0]}</h3>
-          <h5>${introText[1]}</h5>
-          <h5>${introText[2]}</h5>
-          <p>${introText[3]}</p>
-          <p>${introText[4]}</p>
+            <h3>${introText[0]}</h3>
+            <h5>${introText[1]}</h5>
+            <h5>${introText[2]}</h5>
+            <p>${introText[3]}</p>
+            <p>${introText[4]}</p>
           </div>` 
 
            
