@@ -1300,4 +1300,9 @@
         display: grid;
         grid-template-columns: repeat(1, auto);
     }
+
+    .player-types .grid-card{
+        margin: 5% auto;
+        width: 60%;
+    }
 }

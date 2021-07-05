@@ -89,12 +89,12 @@
 
 
  /* Drop down Menu UL-5 */
- const sponsorsUL = document.getElementById('sponsors-ul')
- const sponsorsButton = document.getElementById('sponsors-button') 
- sponsorsButton.addEventListener('click', () => {
- sponsorsButton.classList.toggle('border-outline')
- sponsorsUL.classList.toggle('show');
- })
+//  const sponsorsUL = document.getElementById('sponsors-ul')
+//  const sponsorsButton = document.getElementById('sponsors-button') 
+//  sponsorsButton.addEventListener('click', () => {
+//  sponsorsButton.classList.toggle('border-outline')
+//  sponsorsUL.classList.toggle('show');
+//  })
 
  
  /* Closing Drop-Down Menu UL-5 When user clicks outside of Menu for Mobile Layout */ 
