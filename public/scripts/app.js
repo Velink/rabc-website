@@ -116,7 +116,7 @@ fetchHeren();
 function hideFunction4(){
   const x4 = document.getElementById("Gemengde");
   if(x4.style.display  === "none"){
-    x4.style.display = "block";
+    x4.style.display = "flex";
   } else {
     x4.style.display = "none";
   }
@@ -184,7 +184,7 @@ function hideFunctionG6(){
 function hideFunction3(){
   const x3 = document.getElementById("Dames");
   if(x3.style.display  === "none"){
-    x3.style.display = "block";
+    x3.style.display = "flex";
   } else {
     x3.style.display = "none";
   }
@@ -213,7 +213,7 @@ function hideFunctionD2(){
 function hideFunction2(){
   const x2 = document.getElementById("Heren");
   if(x2.style.display  === "none"){
-    x2.style.display = "block";
+    x2.style.display = "flex";
   } else {
     x2.style.display = "none";
   }

@@ -138,6 +138,10 @@
         pointer-events: all;
     }
 
+    .navbar ul li:nth-of-type(4) ul li:hover{
+        background-color: #424242;
+    }
+
     /* Sub-Menu 4 */
     .navbar ul li:nth-of-type(5) ul.show{
         display: flex;
@@ -174,6 +178,10 @@
         opacity: 0;
         transform: translateY(0px);
         display: none;
+    }
+
+    .drop-down-container ul li:nth-of-type(5) a:hover{
+        color: #fff;
     }
 
     .drop-down-container:nth-of-type(2) ul{
@@ -537,6 +545,10 @@
         pointer-events: all;
     }
 
+    .navbar ul li:nth-of-type(4) ul li:hover{
+        background-color: #424242;
+    }
+
     /* Sub-Menu 4 */
     .navbar ul li:nth-of-type(5) ul.show{
         display: flex;
@@ -575,7 +587,10 @@
         display: none;
     }
 
-    
+    .drop-down-container ul li:nth-of-type(5) a:hover{
+        color: #fff;
+    }
+
     .drop-down-container:nth-of-type(2) ul{
         margin-right: 0px;
         right: 0;
@@ -619,13 +634,20 @@
         background-color: #e4002b;
     }
 
+   
+    #join-ul{
+        width: 100%;
+        margin-bottom: 5px;
+    }
+
     .drop-down-container ul li:nth-of-type(2) ul li{
-        background-color:#fff;
+        background-color:#e4002b;
+        
     }
 
     
     .drop-down-container ul li:nth-of-type(2) ul li a{
-        color:#000;
+        color:#fff;
     }
 
     /* Grey RABC Separator Banner */
@@ -920,6 +942,10 @@
             transform: translateY(5px);
             pointer-events: all;
         }
+
+        .navbar ul li:nth-of-type(4) ul li:hover{
+            background-color: #424242;
+        }
     
         /* Sub-Menu 4 */
         .navbar ul li:nth-of-type(5) ul.show{
@@ -957,6 +983,10 @@
             opacity: 0;
             transform: translateY(0px);
             display: none;
+        }
+
+        .drop-down-container ul li:nth-of-type(5) a:hover{
+            color: #fff;
         }
     
         
@@ -1003,13 +1033,22 @@
             background-color: #e4002b;
         }
 
-        .drop-down-container ul li:nth-of-type(2) ul li{
-            background-color:#fff;
+        
+        #join-ul{
+            width: 100%;
+            margin-bottom: 5px;
         }
 
-        
+        .drop-down-container ul li:nth-of-type(2) ul li{
+            background-color:#e4002b;
+        }
+
+        #join-ul li:hover{
+            background-color: #424242;
+        }
+
         .drop-down-container ul li:nth-of-type(2) ul li a{
-            color:#000;
+            color:#fff;
         }
 
         .below-slider-links{
@@ -1304,5 +1343,75 @@
     .player-types .grid-card{
         margin: 5% auto;
         width: 60%;
+    }
+}
+
+/* Query For Competition Group Cards */
+@media(max-width: 950px){
+    #Dames{
+        display: flex;
+        flex-direction: column;
+    }
+
+    #Dames .comp-div{
+        margin: 0 10px;
+    }
+
+    .heren-container .grid-card{
+        min-width: 185px;
+        max-width: 330px;
+    }
+
+    .heren-container ul li{
+        font-size: 14px;
+    }
+
+    #Heren{
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    #Gemengde{
+        display: flex;
+        flex-direction: column !important;
+        justify-content: center;
+    }
+
+    .first-col{
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .second-col{
+        display:flex;
+        margin: 0 auto;
+        justify-content: center;
+    }
+
+    .third-col{
+        display: flex;
+        margin: 0 auto;
+        justify-content: center;
+        margin-bottom: 4%;
+    }
+}
+
+@media(max-width: 550px){
+    #Heren{
+        display: flex;
+        flex-direction: column !important;
+    }
+
+    .first-col{
+        flex-direction: column;
+    }
+
+    .second-col{
+        flex-direction: column;
+    }
+
+    .third-col{
+        flex-direction: column;
     }
 }

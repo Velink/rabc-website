@@ -196,7 +196,7 @@
              toggleButton2DamesSub1.addEventListener('click', () => {
              toggleButtonDamesSub1.classList.toggle('flip');
              })
- 
+
               /* Function for opening the Dames sub-menu 2 */
              const toggleButtonDamesSub2 = document.getElementsByClassName('toggle-button-dames-sub')[2];
              const toggleButton2DamesSub2 = document.getElementsByClassName('toggle-button-dames-sub')[3];

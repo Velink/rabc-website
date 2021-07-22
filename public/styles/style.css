@@ -92,6 +92,10 @@
     white-space: nowrap;
 }
 
+.navbar ul li:nth-of-type(5) a:hover{
+    color: #e4002b;
+}
+
 /* On-click animation of hamburger */
 .transition > svg {
     outline: 0;
@@ -148,6 +152,10 @@
     transition: all 0.4s ease;
 }
 
+.drop-down-container ul li:nth-of-type(5) a:hover{
+    color: #fff;
+}
+
 .drop-down-container:nth-of-type(2) ul{
     margin-right: -55px;
     right: 0;
@@ -170,7 +178,7 @@
 }
 
 .drop-down-container:nth-of-type(4) ul{
-    margin-right: -12px;
+    margin-right: -8px;
     right: 0;
 }
 
@@ -523,7 +531,7 @@
     padding: 2% 3%;
     width: 70%;
     border-radius: 25px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 rgba(124, 100, 100, 0.2);
     text-align: center;
     align-items: center;
 

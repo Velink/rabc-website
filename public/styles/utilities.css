@@ -117,7 +117,7 @@
     padding: 5%;
     width: 100%;
     border-radius: 25px;
-    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    box-shadow: 0 4px 8px 0 #e4002b;
     text-align: center;
     align-items: center;
 
@@ -240,11 +240,35 @@
 .heren-container{
     display:flex;
     flex-direction: column;
+    min-width: 185px;
+    max-width: 330px;
+    margin: 0 auto;
+    margin-bottom: 10%;
+}
+
+
+#Gemengde{
+    justify-content: center;
+    margin-bottom: 1%;
+}
+
+#Heren{
+    display: flex;
+    flex-direction: row;
+}
+
+#heren-container-list-6{
+    padding: 65px;
+}
+
+#heren-container-list-7{
+    padding: 65px;
 }
 
 .heren-container ul li{
     list-style: none;
     padding: 5px;
+    white-space: nowrap;
 }
 
 #heren-container ul{
@@ -595,6 +619,14 @@
     margin: 0 auto;
 }
 
+#heren-container-6 > .grid-card{
+    width: 100%;
+}
+
+#heren-container-7 > .grid-card{
+    width: 100%;
+}
+
 /* Toggle Class Remove Image for Competition Groups */ 
 .remove-image{
     display: none;
@@ -608,3 +640,16 @@
 #sb-trophy:hover{
     color: #424242;
 }
+
+#Dames{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.comp-div{
+    display: flex;
+    flex-direction: column;
+    margin: 0 50px;
+}
+
