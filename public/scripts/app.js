@@ -351,7 +351,7 @@ function hideFunctionG6(){
 function hideFunction3(){
   const x3 = document.getElementById("Dames");
   if(x3.style.display  === "none"){
-    x3.classList.toggle = "flex";
+    x3.style.display = "flex";
   } else {
     x3.style.display = "none";
   }

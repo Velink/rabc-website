@@ -98,13 +98,6 @@
 
  
  /* Closing Drop-Down Menu UL-5 When user clicks outside of Menu for Mobile Layout */ 
- document.addEventListener("click", function(event){
-     if(event.target.closest('.drop-down-container')) return
-     if(sponsorsUL.classList.contains('show')){
-     sponsorsUL.classList.remove('show');
-     sponsorsButton.classList.remove('border-outline')
-     } return
- })
 
  /* Hide Drop Down Menu 1 */
  // function hideAlgemeneMenu() {
