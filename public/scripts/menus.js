@@ -118,6 +118,22 @@
              toggleButton2.addEventListener('click', () => {
              toggleButton1.classList.toggle('flip');
              })
+
+              /* Clicking Heren in Navbar triggers Icon flip */
+              function iconFlipHeren(){
+                const toggleButton2 = document.getElementsByClassName('toggle-button-2')[0]; 
+                const toggleButton2HerenSub1 = document.getElementsByClassName('toggle-button-heren-sub')[0];
+                const toggleButtonHerenSub2 = document.getElementsByClassName('toggle-button-heren-sub')[2];
+                const toggleButton3HerenSub1 = document.getElementsByClassName('toggle-button-heren-sub')[4];
+                const toggleButton4HerenSub1 = document.getElementsByClassName('toggle-button-heren-sub')[6];
+                const toggleButton5HerenSub1 = document.getElementsByClassName('toggle-button-heren-sub')[8];
+                toggleButton2.classList.toggle('flip');
+                toggleButton2HerenSub1.classList.toggle('flip');
+                toggleButtonHerenSub2.classList.toggle('flip');
+                toggleButton3HerenSub1.classList.toggle('flip');
+                toggleButton4HerenSub1.classList.toggle('flip');
+                toggleButton5HerenSub1.classList.toggle('flip');
+            }
  
              /* Function for opening the Heren sub-menu 1 */
              const toggleButtonHerenSub1 = document.getElementsByClassName('toggle-button-heren-sub')[0];
@@ -178,7 +194,16 @@
              toggleButton4.addEventListener('click', () => {
              toggleButton3.classList.toggle('flip');
              })
- 
+             
+             /* Clicking Dames in Navbar triggers Icon flip */
+            function iconFlip(){
+                const toggleButton3 = document.getElementsByClassName('toggle-button-3')[0]; 
+                const toggleButton2DamesSub1 = document.getElementsByClassName('toggle-button-dames-sub')[0];
+                const toggleButtonDamesSub2 = document.getElementsByClassName('toggle-button-dames-sub')[2];
+                toggleButton3.classList.toggle('flip');
+                toggleButton2DamesSub1.classList.toggle('flip');
+                toggleButtonDamesSub2.classList.toggle('flip');
+            }
              
              /* Function for opening the Dames sub-menu 1 */
              const toggleButtonDamesSub1 = document.getElementsByClassName('toggle-button-dames-sub')[0];
@@ -209,6 +234,26 @@
              toggleButton6.addEventListener('click', () => {
              toggleButton5.classList.toggle('flip');
              })
+
+             /* Function for Icon Flip Gemengde from Navbar click */
+
+             function iconFlipGemengde(){
+                const toggleButton4 = document.getElementsByClassName('toggle-button-4')[0]; 
+                const toggleButtonGemengde2 = document.getElementsByClassName('toggle-button-gemengde-sub')[0];
+                const toggleButtonGemengde3 = document.getElementsByClassName('toggle-button-gemengde-sub')[2];
+                const toggleButtonGemengde4 = document.getElementsByClassName('toggle-button-gemengde-sub')[4];
+                const toggleButtonGemengde5 = document.getElementsByClassName('toggle-button-gemengde-sub')[6];
+                const toggleButtonGemengde6 = document.getElementsByClassName('toggle-button-gemengde-sub')[8];
+                const toggleButtonGemengde7 = document.getElementsByClassName('toggle-button-gemengde-sub')[10];
+                toggleButton4.classList.toggle('flip');
+                toggleButtonGemengde2.classList.toggle('flip');
+                toggleButtonGemengde3.classList.toggle('flip');
+                toggleButtonGemengde4.classList.toggle('flip');
+                toggleButtonGemengde5.classList.toggle('flip');
+                toggleButtonGemengde6.classList.toggle('flip');
+                toggleButtonGemengde7.classList.toggle('flip');
+            }
+ 
  
               /* Function for opening the Gemengde sub-menu 1 */
              const toggleButtonGemengdeSub1 = document.getElementsByClassName('toggle-button-gemengde-sub')[0];

@@ -380,6 +380,7 @@ function linkFunction3(){
   }
 }
 
+
 /* Hide competition list inner Women */
 function hideFunctionD1(){
   const x = document.getElementById('heren-container-6');
