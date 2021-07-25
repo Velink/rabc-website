@@ -254,7 +254,9 @@ function hideFunction4(){
 
 /* If Gemengde exists in URL then have those group cards already open on page load */ 
 const gemengdeLink = document.getElementById("gemengde-link");
+
 gemengdeLink.addEventListener("click", gemengdeFunction3());
+
 function gemengdeFunction3(){
   const x0 = document.getElementById("Gemengde");
   const x1 = document.getElementById('heren-container-8');
@@ -428,7 +430,7 @@ function herenFunction3(){
   x0.style.display = "flex";
   x1.style.display = "block";
   x2.style.display = "block";
-  x3.style.display = "block";
+  x3.style.display = "block"; 
   x4.style.display = "block";
   x5.style.display = "block";
   toggleButton2.classList.toggle('flip');
@@ -694,6 +696,7 @@ function fetchPlayerType(){
     let competitiveLink = '/joinCompetitive.html';
     let recreationLink = '/joinRecreation.html'
     client.fetch(playerTypeQuery).then(response => {
+      console.log(response);
         const html = response.map(user =>{
           for(let i = 0; i < user.information.length; i++){
             playerText[i] = user.information[i].children[0].text;  
