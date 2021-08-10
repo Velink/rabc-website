@@ -175,15 +175,15 @@
              toggleButtonHerenSub4.classList.toggle('flip');
              })
  
-             /* Function for opening the Heren sub-menu 5 */
-             const toggleButtonHerenSub5 = document.getElementsByClassName('toggle-button-heren-sub')[8];
-             const toggleButton2HerenSub5 = document.getElementsByClassName('toggle-button-heren-sub')[9];
-             toggleButtonHerenSub5.addEventListener('click', () => {
-             toggleButtonHerenSub5.classList.toggle('flip');
-             })
-             toggleButton2HerenSub5.addEventListener('click', () => {
-             toggleButtonHerenSub5.classList.toggle('flip');
-             })
+            //  /* Function for opening the Heren sub-menu 5 */
+            //  const toggleButtonHerenSub5 = document.getElementsByClassName('toggle-button-heren-sub')[8];
+            //  const toggleButton2HerenSub5 = document.getElementsByClassName('toggle-button-heren-sub')[9];
+            //  toggleButtonHerenSub5.addEventListener('click', () => {
+            //  toggleButtonHerenSub5.classList.toggle('flip');
+            //  })
+            //  toggleButton2HerenSub5.addEventListener('click', () => {
+            //  toggleButtonHerenSub5.classList.toggle('flip');
+            //  })
  
              /* Function for opening the Dames Menu and Animation of Arrow Icon */
              const toggleButton3 = document.getElementsByClassName('toggle-button-3')[0]; 
@@ -296,22 +296,22 @@
              toggleButtonGemengdeSub4.classList.toggle('flip');
              })
  
-              /* Function for opening the Gemengde sub-menu 5 */
-             const toggleButtonGemengdeSub5 = document.getElementsByClassName('toggle-button-gemengde-sub')[8];
-             const toggleButton2GemengdeSub5 = document.getElementsByClassName('toggle-button-gemengde-sub')[9];
-             toggleButtonGemengdeSub5.addEventListener('click', () => {
-             toggleButtonGemengdeSub5.classList.toggle('flip');
-             })
-             toggleButton2GemengdeSub5.addEventListener('click', () => {
-             toggleButtonGemengdeSub5.classList.toggle('flip');
-             })
+            //   /* Function for opening the Gemengde sub-menu 5 */
+            //  const toggleButtonGemengdeSub5 = document.getElementsByClassName('toggle-button-gemengde-sub')[8];
+            //  const toggleButton2GemengdeSub5 = document.getElementsByClassName('toggle-button-gemengde-sub')[9];
+            //  toggleButtonGemengdeSub5.addEventListener('click', () => {
+            //  toggleButtonGemengdeSub5.classList.toggle('flip');
+            //  })
+            //  toggleButton2GemengdeSub5.addEventListener('click', () => {
+            //  toggleButtonGemengdeSub5.classList.toggle('flip');
+            //  })
  
-              /* Function for opening the Gemengde sub-menu 6 */
-             const toggleButtonGemengdeSub6 = document.getElementsByClassName('toggle-button-gemengde-sub')[10];
-             const toggleButton2GemengdeSub6 = document.getElementsByClassName('toggle-button-gemengde-sub')[11];
-             toggleButtonGemengdeSub6.addEventListener('click', () => {
-             toggleButtonGemengdeSub6.classList.toggle('flip');
-             })
-             toggleButton2GemengdeSub6.addEventListener('click', () => {
-             toggleButtonGemengdeSub6.classList.toggle('flip');
-             })
+            //   /* Function for opening the Gemengde sub-menu 6 */
+            //  const toggleButtonGemengdeSub6 = document.getElementsByClassName('toggle-button-gemengde-sub')[10];
+            //  const toggleButton2GemengdeSub6 = document.getElementsByClassName('toggle-button-gemengde-sub')[11];
+            //  toggleButtonGemengdeSub6.addEventListener('click', () => {
+            //  toggleButtonGemengdeSub6.classList.toggle('flip');
+            //  })
+            //  toggleButton2GemengdeSub6.addEventListener('click', () => {
+            //  toggleButtonGemengdeSub6.classList.toggle('flip');
+            //  })

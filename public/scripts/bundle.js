@@ -263,15 +263,15 @@ function gemengdeFunction3(){
   const x2 = document.getElementById('heren-container-9');
   const x3 = document.getElementById('heren-container-10');
   const x4 = document.getElementById('heren-container-11');
-  const x5 = document.getElementById('heren-container-12');
-  const x6 = document.getElementById('heren-container-13');
+  // const x5 = document.getElementById('heren-container-12');
+  // const x6 = document.getElementById('heren-container-13');
   const toggleButtonGemengde = document.getElementsByClassName('toggle-button-4')[0]; 
   const toggleButtonGemengde2 = document.getElementsByClassName('toggle-button-gemengde-sub')[0];
   const toggleButtonGemengde3 = document.getElementsByClassName('toggle-button-gemengde-sub')[2];
   const toggleButtonGemengde4 = document.getElementsByClassName('toggle-button-gemengde-sub')[4];
   const toggleButtonGemengde5 = document.getElementsByClassName('toggle-button-gemengde-sub')[6];
-  const toggleButtonGemengde6 = document.getElementsByClassName('toggle-button-gemengde-sub')[8];
-  const toggleButtonGemengde7 = document.getElementsByClassName('toggle-button-gemengde-sub')[10];
+  // const toggleButtonGemengde6 = document.getElementsByClassName('toggle-button-gemengde-sub')[8];
+  // const toggleButtonGemengde7 = document.getElementsByClassName('toggle-button-gemengde-sub')[10];
   const gemengdeContainer = document.getElementById('Gemengde');
   if(window.location.href.indexOf("Gemengde") > -1){
   x0.style.display = "flex";
@@ -279,15 +279,15 @@ function gemengdeFunction3(){
   x2.style.display = "block";
   x3.style.display = "block";
   x4.style.display = "block";
-  x5.style.display = "block";
-  x6.style.display = "block";
+  // x5.style.display = "block";
+  // x6.style.display = "block";
   toggleButtonGemengde.classList.toggle('flip');
   toggleButtonGemengde2.classList.toggle('flip');
   toggleButtonGemengde3.classList.toggle('flip');
   toggleButtonGemengde4.classList.toggle('flip');
   toggleButtonGemengde5.classList.toggle('flip');
-  toggleButtonGemengde6.classList.toggle('flip');
-  toggleButtonGemengde7.classList.toggle('flip');
+  // toggleButtonGemengde6.classList.toggle('flip');
+  // toggleButtonGemengde7.classList.toggle('flip');
   }
 }
 
