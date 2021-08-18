@@ -62,8 +62,8 @@
                         <a id="competition-button">Competitie</a>
                         <ul id="competition-ul">
                             <li><a href="competition.html#Dames" id="dames-link" onclick="hideFunction3(), hideFunctionD1(), hideFunctionD2(), iconFlip()">Dames</a></li>
-                            <li><a href="competition.html#Heren" id="heren-link" onclick="hideFunction2(), hideFunctionH1(), hideFunctionH2(), hideFunctionH3(), hideFunctionH4(), hideFunctionH5(), iconFlipHeren()">Heren</a></li>
-                            <li><a href="competition.html#Gemengde" id="gemengde-link" onclick="hideFunction4(), hideFunctionG1(), hideFunctionG2(), hideFunctionG3(), hideFunctionG4(), hideFunctionG5(), hideFunctionG6(), iconFlipGemengde()">Gemengd</a></li>
+                            <li><a href="competition.html#Heren" id="heren-link" onclick="hideFunction2(), hideFunctionH1(), hideFunctionH2(), hideFunctionH3(), hideFunctionH4(), iconFlipHeren()">Heren</a></li>
+                            <li><a href="competition.html#Gemengde" id="gemengde-link" onclick="hideFunction4(), hideFunctionG1(), hideFunctionG2(), hideFunctionG3(), hideFunctionG4(), iconFlipGemengde()">Gemengd</a></li>
                         </ul>
                     </li>
 <!--     
@@ -199,40 +199,44 @@
 
         <div id="Dames" style="display:none">
 
-            <div class="comp-div">
-                <div id="list-drop">
-                    <button class="toggle-button-dames-sub">
-                        <i id="toggle-button" class="fas fa-caret-right fa-2x" onclick="hideFunctionD1()"></i>
-                    </button>
-                    <h3 class="toggle-button-dames-sub" onclick="hideFunctionD1()">RABC 1D</h3>
+            <div class="first-col-2">
+                <div class="comp-div">
+                    <div id="list-drop">
+                        <button class="toggle-button-dames-sub">
+                            <i id="toggle-button" class="fas fa-caret-right fa-2x" onclick="hideFunctionD1()"></i>
+                        </button>
+                        <h3 class="toggle-button-dames-sub" onclick="hideFunctionD1()">RABC 1D</h3>
+                    </div>
+        
+                    <div id="heren-container-5" class="heren-container" style="display:none">
+                        <div class="grid-card">
+                            <ul id="heren-container-list-5">
+        
+                            </ul>
+                            <img id="group-img-4" src="" alt="" width="300px" height="250px">
+                        </div>
+                    </div>
+    
                 </div>
-    
-                <div id="heren-container-6" class="heren-container" style="display:none">
-                    <div class="grid-card gc-width">
-                        <ul id="heren-container-list-6">
-    
-                        </ul>
-                        <img id="group-img-5" src="" alt="" width="300px" height="250px">
+                <div class="comp-div">
+                    <div id="list-drop">
+                        <button class="toggle-button-dames-sub">
+                            <i id="toggle-button" class="fas fa-caret-right fa-2x" onclick="hideFunctionD2()"></i>
+                        </button>
+                        <h3 class="toggle-button-dames-sub" onclick="hideFunctionD2()">RABC 2D</h3>
+                    </div>
+                    <div id="heren-container-6" class="heren-container" style="display:none">
+                        <div class="grid-card gc-width">
+                            <ul id="heren-container-list-6">
+                            
+                            </ul>
+                            <img id="group-img-5" src="" alt="" width="300px" height="250px">
+                        </div>
                     </div>
                 </div>
+              
             </div>
 
-            <div class="comp-div">
-                <div id="list-drop">
-                    <button class="toggle-button-dames-sub">
-                        <i id="toggle-button" class="fas fa-caret-right fa-2x" onclick="hideFunctionD2()"></i>
-                    </button>
-                    <h3 class="toggle-button-dames-sub" onclick="hideFunctionD2()">RABC 2D</h3>
-                </div>
-                <div id="heren-container-7" class="heren-container" style="display:none">
-                    <div class="grid-card gc-width">
-                        <ul id="heren-container-list-7">
-                        
-                        </ul>
-                        <img id="group-img-6" src="" alt="" width="300px" height="250px">
-                    </div>
-                </div>
-            </div>
            
         </div>
 
@@ -256,12 +260,12 @@
                             <h3 class="toggle-button-gemengde-sub" onclick="hideFunctionG1()">RABC 1G</h3>
                         </div>
         
-                        <div id="heren-container-8" class="heren-container" style="display:none">
+                        <div id="heren-container-7" class="heren-container" style="display:none">
                             <div class="grid-card">
-                                <ul id="heren-container-list-8">
+                                <ul id="heren-container-list-7">
         
                                 </ul>
-                                <img id="group-img-7" src="" alt="" width="300px" height="250px">
+                                <img id="group-img-6" src="" alt="" width="300px" height="250px">
                             </div>
                         </div>
                     </div>
@@ -273,10 +277,10 @@
                             </button>
                             <h3 class="toggle-button-gemengde-sub" onclick="hideFunctionG2()">RABC 2G</h3>
                         </div>
-                        <div id="heren-container-9" class="heren-container" style="display:none">
+                        <div id="heren-container-8" class="heren-container" style="display:none">
                             <div class="grid-card">
-                                <ul id="heren-container-list-9"></ul>
-                                <img id="group-img-8" src="" alt="" width="300px" height="250px">
+                                <ul id="heren-container-list-8"></ul>
+                                <img id="group-img-7" src="" alt="" width="300px" height="250px">
                             </div>
                         </div>
                     </div>
@@ -292,12 +296,12 @@
                             <h3 class="toggle-button-gemengde-sub" onclick="hideFunctionG3()">RABC 3G</h3>
                         </div>
         
-                        <div id="heren-container-10" class="heren-container" style="display:none">
+                        <div id="heren-container-9" class="heren-container" style="display:none">
                             <div class="grid-card">
-                                <ul id="heren-container-list-10">
+                                <ul id="heren-container-list-9">
         
                                 </ul>
-                                <img id="group-img-9" src="" alt="" width="300px" height="250px">
+                                <img id="group-img-8" src="" alt="" width="300px" height="250px">
                             </div>
                         </div>
                     </div>
@@ -310,12 +314,12 @@
                             <h3 class="toggle-button-gemengde-sub" onclick="hideFunctionG4()">RABC 4G</h3>
                         </div>
         
-                        <div id="heren-container-11" class="heren-container" style="display:none">
+                        <div id="heren-container-10" class="heren-container" style="display:none">
                             <div class="grid-card">
-                                <ul id="heren-container-list-11">
+                                <ul id="heren-container-list-10">
         
                                 </ul>
-                                <img id="group-img-10" src="" alt="" width="300px" height="250px">
+                                <img id="group-img-9" src="" alt="" width="300px" height="250px">
                             </div>
                         </div>
                     </div>

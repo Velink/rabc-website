@@ -1,6 +1,5 @@
 "use strict";
 
-
 const sanityClient = require('@sanity/client')
 
 const client = sanityClient({
@@ -254,13 +253,15 @@ function hideFunction4(){
 
 /* If Gemengde exists in URL then have those group cards already open on page load */ 
 const gemengdeLink = document.getElementById("gemengde-link");
+
 gemengdeLink.addEventListener("click", gemengdeFunction3());
+
 function gemengdeFunction3(){
   const x0 = document.getElementById("Gemengde");
-  const x1 = document.getElementById('heren-container-8');
-  const x2 = document.getElementById('heren-container-9');
-  const x3 = document.getElementById('heren-container-10');
-  const x4 = document.getElementById('heren-container-11');
+  const x1 = document.getElementById('heren-container-7');
+  const x2 = document.getElementById('heren-container-8');
+  const x3 = document.getElementById('heren-container-9');
+  const x4 = document.getElementById('heren-container-10');
   // const x5 = document.getElementById('heren-container-12');
   // const x6 = document.getElementById('heren-container-13');
   const toggleButtonGemengde = document.getElementsByClassName('toggle-button-4')[0]; 
@@ -290,7 +291,7 @@ function gemengdeFunction3(){
 }
 
 function hideFunctionG1(){
-  const x4 = document.getElementById("heren-container-8");
+  const x4 = document.getElementById("heren-container-7");
   if(x4.style.display  === "none"){
     x4.style.display = "block";
   } else {
@@ -299,7 +300,7 @@ function hideFunctionG1(){
 }
 
 function hideFunctionG2(){
-  const x4 = document.getElementById("heren-container-9");
+  const x4 = document.getElementById("heren-container-8");
   if(x4.style.display  === "none"){
     x4.style.display = "block";
   } else {
@@ -309,7 +310,7 @@ function hideFunctionG2(){
 
 
 function hideFunctionG3(){
-  const x4 = document.getElementById("heren-container-10");
+  const x4 = document.getElementById("heren-container-9");
   if(x4.style.display  === "none"){
     x4.style.display = "block";
   } else {
@@ -318,7 +319,7 @@ function hideFunctionG3(){
 }
 
 function hideFunctionG4(){
-  const x4 = document.getElementById("heren-container-11");
+  const x4 = document.getElementById("heren-container-10");
   if(x4.style.display  === "none"){
     x4.style.display = "block";
   } else {
@@ -362,12 +363,12 @@ const damesLink = document.getElementById("dames-link");
 damesLink.addEventListener("click", linkFunction3());
 function linkFunction3(){
   const x3 = document.getElementById("Dames");
-  const x2 = document.getElementById('heren-container-6');
-  const x1 = document.getElementById('heren-container-7');
+  const x2 = document.getElementById('heren-container-5');
+  const x1 = document.getElementById('heren-container-6');
   const toggleButton3 = document.getElementsByClassName('toggle-button-3')[0]; 
   const toggleButton2DamesSub1 = document.getElementsByClassName('toggle-button-dames-sub')[0];
   const toggleButtonDamesSub2 = document.getElementsByClassName('toggle-button-dames-sub')[2];
-  const damesContainer = document.getElementById('Dames');
+  // const damesContainer = document.getElementById('Dames');
   if(window.location.href.indexOf("Dames") > -1){
   x3.style.display = "flex";
   x2.style.display = "block";
@@ -378,9 +379,10 @@ function linkFunction3(){
   }
 }
 
+
 /* Hide competition list inner Women */
 function hideFunctionD1(){
-  const x = document.getElementById('heren-container-6');
+  const x = document.getElementById('heren-container-5');
   if(x.style.display  === "none"){
     x.style.display = "flex";
   } else {
@@ -389,7 +391,7 @@ function hideFunctionD1(){
 }
 
 function hideFunctionD2(){
-  const x = document.getElementById('heren-container-7');
+  const x = document.getElementById('heren-container-6');
   if(x.style.display  === "none"){
     x.style.display = "flex";
   } else {
@@ -416,13 +418,13 @@ function herenFunction3(){
   const x2 = document.getElementById('heren-container-2');
   const x3 = document.getElementById('heren-container-3');
   const x4 = document.getElementById('heren-container-4');
-  const x5 = document.getElementById('heren-container-5');
+  // const x5 = document.getElementById('heren-container-5');
   const toggleButton2 = document.getElementsByClassName('toggle-button-2')[0]; 
   const toggleButton2HerenSub1 = document.getElementsByClassName('toggle-button-heren-sub')[0];
   const toggleButtonHerenSub2 = document.getElementsByClassName('toggle-button-heren-sub')[2];
   const toggleButton3HerenSub1 = document.getElementsByClassName('toggle-button-heren-sub')[4];
   const toggleButton4HerenSub1 = document.getElementsByClassName('toggle-button-heren-sub')[6];
-  const toggleButton5HerenSub1 = document.getElementsByClassName('toggle-button-heren-sub')[8];
+  // const toggleButton5HerenSub1 = document.getElementsByClassName('toggle-button-heren-sub')[8];
   const herenContainer = document.getElementById('Heren');
   if(window.location.href.indexOf("Heren") > -1){
   x0.style.display = "flex";
@@ -430,13 +432,13 @@ function herenFunction3(){
   x2.style.display = "block";
   x3.style.display = "block"; 
   x4.style.display = "block";
-  x5.style.display = "block";
+  // x5.style.display = "block";
   toggleButton2.classList.toggle('flip');
   toggleButton2HerenSub1.classList.toggle('flip');
   toggleButtonHerenSub2.classList.toggle('flip');
   toggleButton3HerenSub1.classList.toggle('flip');
   toggleButton4HerenSub1.classList.toggle('flip');
-  toggleButton5HerenSub1.classList.toggle('flip');
+  // toggleButton5HerenSub1.classList.toggle('flip');
   }
 }
 
@@ -506,8 +508,8 @@ function fetchPlayingMoments(){
             <p>${introText[4]}</p>
           </div>` 
 
-           
-           document.querySelector(`#playing-moments-grid`).insertAdjacentHTML('beforeend', htmlRender); 
+            
+            document.querySelector(`#playing-moments-grid`).insertAdjacentHTML('beforeend', htmlRender); 
   
         }
     })
@@ -541,9 +543,9 @@ function fetchPlayingMoments2(){
           <p>${introText[6]}</p>
           </div>` 
 
-           if(j == 5){
+            if(j == 5){
               document.querySelector(`#youth-playing-card`).insertAdjacentHTML('beforeend', htmlRender); 
-           }
+            }
         }
     })
     .catch(error=> {
@@ -576,7 +578,7 @@ function fetchPlayingMoments3(){
 
         if(j == 6){
             document.querySelector(`#competition-playing-card`).insertAdjacentHTML('beforeend', htmlRender); 
-         }
+          }
         }
     })
     .catch(error=> {
@@ -609,7 +611,7 @@ function fetchPlayingMoments4(){
 
         if( j ==  7){
             document.querySelector(`#recreation-playing-card`).insertAdjacentHTML('beforeend', htmlRender); 
-         }
+          }
         }
     })
     .catch(error=> {
@@ -694,6 +696,7 @@ function fetchPlayerType(){
     let competitiveLink = '/joinCompetitive.html';
     let recreationLink = '/joinRecreation.html'
     client.fetch(playerTypeQuery).then(response => {
+      console.log(response);
         const html = response.map(user =>{
           for(let i = 0; i < user.information.length; i++){
             playerText[i] = user.information[i].children[0].text;  
@@ -766,8 +769,3 @@ function fetchPdfFile(){
 }
 
 fetchPdfFile();
-
-
-
-
-

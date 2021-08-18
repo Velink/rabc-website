@@ -126,13 +126,13 @@
                 const toggleButtonHerenSub2 = document.getElementsByClassName('toggle-button-heren-sub')[2];
                 const toggleButton3HerenSub1 = document.getElementsByClassName('toggle-button-heren-sub')[4];
                 const toggleButton4HerenSub1 = document.getElementsByClassName('toggle-button-heren-sub')[6];
-                const toggleButton5HerenSub1 = document.getElementsByClassName('toggle-button-heren-sub')[8];
+                // const toggleButton5HerenSub1 = document.getElementsByClassName('toggle-button-heren-sub')[8];
                 toggleButton2.classList.toggle('flip');
                 toggleButton2HerenSub1.classList.toggle('flip');
                 toggleButtonHerenSub2.classList.toggle('flip');
                 toggleButton3HerenSub1.classList.toggle('flip');
                 toggleButton4HerenSub1.classList.toggle('flip');
-                toggleButton5HerenSub1.classList.toggle('flip');
+                // toggleButton5HerenSub1.classList.toggle('flip');
             }
  
              /* Function for opening the Heren sub-menu 1 */

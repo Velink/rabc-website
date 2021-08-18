@@ -257,14 +257,6 @@
     flex-direction: row;
 }
 
-#heren-container-list-6{
-    padding: 65px;
-}
-
-#heren-container-list-7{
-    padding: 65px;
-}
-
 .heren-container ul li{
     list-style: none;
     padding: 5px;
@@ -653,3 +645,7 @@
     margin: 0 50px;
 }
 
+.first-col-2{
+    display: flex;
+    margin: 0 auto;
+}
