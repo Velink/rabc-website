@@ -46,6 +46,34 @@ function fetchIntroInformation(){
 fetchIntroInformation();
 
 
+/* Sponsor Information */ 
+const sponsorInformationQuery = '*[_type == "sponsor"] | order(sponsorNumber)';
+
+function fetchSponsorInformation(){
+    let j = 1;
+    client.fetch(sponsorInformationQuery).then(response => {
+        const html = response.map(user =>{
+            for (let i = 0; i < user.information.length; i++) {
+              const introText = user.information[i].children[0].text;
+              if(i == 0){
+                const htmlRender = `<h2>${introText}</h2>` 
+                document.querySelector(`#sponsor-text-${j}`).insertAdjacentHTML('beforeend', htmlRender);   
+              } else { 
+                const htmlRender = `<p>${introText}</p>` 
+                document.querySelector(`#sponsor-text-${j}`).insertAdjacentHTML('beforeend', htmlRender);   
+              }
+            }
+        })
+        j++;  
+    })
+    .catch(error=> {
+      console.log(error);
+    })
+}
+
+fetchSponsorInformation();
+
+
 /* Board Employee Information */
 const boardEmployeeInformation = '*[_type == "person"] | order(positionNumber)';
 
@@ -241,6 +269,39 @@ function fetchGroupImage() {
 }
 
 fetchGroupImage();
+
+/* Playing Moments Cards */ 
+const playingMomentsQuery = '*[_type == "playingCard"] | order(cardNumber)';
+
+function fetchPlayingMoments(){
+    client.fetch(playingMomentsQuery).then(response => {
+        for(let j = 0; j < response.length - 3; j++){
+          var introText = [];
+          console.log(response);
+          for (let i = 0; i < response[j].information.length; i++) {
+            introText[i] = response[j].information[i].children[0].text;  
+          }
+          const htmlRender = `
+          <div class="grid-card">
+            <h3>${introText[0]}</h3>
+            <h5>${introText[1]}</h5>
+            <h5>${introText[2]}</h5>
+            <p>${introText[3]}</p>
+            <p>${introText[4]}</p>
+          </div>` 
+
+           
+           document.querySelector(`#playing-moments-grid`).insertAdjacentHTML('beforeend', htmlRender); 
+  
+        }
+    })
+    .catch(error=> {
+      console.log(error);
+    })
+}
+
+fetchPlayingMoments();
+
 
 /* Hide Competition Group List Mixed */
 function hideFunction4(){
@@ -489,39 +550,6 @@ function hideFunctionH5(){
   }
 }
 
-/* Playing Moments Cards */ 
-const playingMomentsQuery = '*[_type == "playingCard"] | order(cardNumber)';
-
-function fetchPlayingMoments(){
-    client.fetch(playingMomentsQuery).then(response => {
-        for(let j = 0; j < response.length - 3; j++){
-          var introText = [];
-          console.log(response);
-          for (let i = 0; i < response[j].information.length; i++) {
-            introText[i] = response[j].information[i].children[0].text;  
-          }
-          const htmlRender = `
-          <div class="grid-card">
-            <h3>${introText[0]}</h3>
-            <h5>${introText[1]}</h5>
-            <h5>${introText[2]}</h5>
-            <p>${introText[3]}</p>
-            <p>${introText[4]}</p>
-          </div>` 
-
-           
-           document.querySelector(`#playing-moments-grid`).insertAdjacentHTML('beforeend', htmlRender); 
-  
-        }
-    })
-    .catch(error=> {
-      console.log(error);
-    })
-}
-
-fetchPlayingMoments();
-
-
 /* Youth Playing Moment Card */
 const playingMomentsQuery2 = '*[_type == "playingCard"] | order(cardNumber)';
 
@@ -658,33 +686,6 @@ function fetchTournamentInformation(){
 }
 
 fetchTournamentInformation();
-
-/* Sponsor Information */ 
-const sponsorInformationQuery = '*[_type == "sponsor"] | order(sponsorNumber)';
-
-function fetchSponsorInformation(){
-    let j = 1;
-    client.fetch(sponsorInformationQuery).then(response => {
-        const html = response.map(user =>{
-            for (let i = 0; i < user.information.length; i++) {
-              const introText = user.information[i].children[0].text;
-              if(i == 0){
-                const htmlRender = `<h2>${introText}</h2>` 
-                document.querySelector(`#sponsor-text-${j}`).insertAdjacentHTML('beforeend', htmlRender);   
-              } else { 
-                const htmlRender = `<p>${introText}</p>` 
-                document.querySelector(`#sponsor-text-${j}`).insertAdjacentHTML('beforeend', htmlRender);   
-              }
-            }
-        })
-        j++;  
-    })
-    .catch(error=> {
-      console.log(error);
-    })
-}
-
-fetchSponsorInformation();
 
 
 /* Fetch Player Type Card */
