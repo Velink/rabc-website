@@ -648,18 +648,24 @@ footer .social-media-banner i{
 /* Footer Sponsors */
 .sponsors-section{
     display: flex;
-    justify-content: space-around;;
+    justify-content: space-around;
     padding-bottom: 1%;
     background-color: #e9eaee;
     align-items: center;
     padding-top: 1%;
+    width: 100%;
+}
+
+.sponsor-section a{
+    margin: 10px;
+    width: 5%;
 }
 
 .sponsors-section img{
-    width: 6%;
-    margin: 0 2%;
+    margin: 0 1%;
     padding: 10px 5px;
     filter: grayscale(100%);
+    width: 100px;
 }
 
 .sponsors-section img:hover {
