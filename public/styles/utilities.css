@@ -142,6 +142,10 @@
     padding-bottom: 5%;
 }
 
+.grid-card a{
+    text-decoration: none;
+}
+
 #grid-card-3 h3{
     margin-top: 12px;
     margin-bottom: 12px;
@@ -455,6 +459,28 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
+}
+
+.youth-info{
+    text-align: center;
+    margin-bottom: 50px;
+    margin: 2%;
+}
+
+.youth-info h3{
+    margin: 15px;
+}
+
+.youth-info ul{
+    list-style: none;
+}
+
+.youth-info img{
+    margin-top: 50px;
+}
+
+.youth-info p{
+    margin: 10px;
 }
 
 #join-youth-intro{
