@@ -4,7 +4,7 @@ var fbPlugin = document.querySelector(".fb-page")
 
 try {
     if(intViewportWidth < 650){
-        fbPlugin.setAttribute("data-adapt-container-width", 'true');
+        fbPlugin.setAttribute("data-width", 300);
     } 
 } catch (error) {
     console.log(error);
