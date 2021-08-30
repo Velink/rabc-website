@@ -134,7 +134,8 @@ if(window.location.href.indexOf('boardandemployees') !== -1){
 
 
 /* Join Information */ 
-if(window.location.href.indexOf('join') !== -1 && window.location.href.indexOf('Recreation') === -1 && window.location.href.indexOf('Competitive') === -1 && window.location.href.indexOf('Youth') === -1){
+let sliderLinks = document.getElementsByClassName('below-slider-links');
+if(sliderLinks.length > 0){
   const joinInformationQuery = '*[_type == "joinInformation"] | order(paragraphNumber)';
 
   function fetchJoinInformation(){
