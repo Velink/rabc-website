@@ -141,8 +141,8 @@
                 toggleButtonGemengde3.classList.toggle('flip');
                 toggleButtonGemengde4.classList.toggle('flip');
                 toggleButtonGemengde5.classList.toggle('flip');
-                toggleButtonGemengde6.classList.toggle('flip');
-                toggleButtonGemengde7.classList.toggle('flip');
+                // toggleButtonGemengde6.classList.toggle('flip');
+                // toggleButtonGemengde7.classList.toggle('flip');
             }
  
  

@@ -79,11 +79,12 @@
     display: flex;
     width: 100%;
     align-items: center;
-    height: 100px;
+    height: 170px;
     flex-wrap: wrap;
 
     position: relative;
     z-index: 1000;
+    
 }
 
 /* Hamburger by default not displayed */
@@ -502,6 +503,7 @@
     box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
     text-align: center;
     align-items: center;
+
 }
 
 .fb-grid-card-1 h3{
@@ -688,14 +690,14 @@ footer .social-media-banner i{
 .sponsors-section img{
     margin: 0 1%;
     padding: 10px 5px;
-    filter: grayscale(100%);
+    /* filter: grayscale(100%); */
     width: 100px;
 }
 
-.sponsors-section img:hover {
+/* .sponsors-section img:hover {
     transition: filter .5s ease-in-out;
     filter: grayscale(0%);
-}
+} */
 
 .bottom-separator{
     background-color: black;

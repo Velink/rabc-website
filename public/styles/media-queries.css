@@ -19,7 +19,7 @@
     }
 
     .navbar{
-        margin-top: 20px;
+        margin-top: 85px;
         display: flex;
         justify-content: space-around;
         align-items: center;
@@ -422,15 +422,15 @@
     }
 
     .navbar{
-        margin-top: 20px;
+        margin-top: 85px;
         display: flex;
         justify-content: space-around;
-        align-items: center;
     }
 
     .navbar img{
         position: relative;
         margin: 0;
+        right: 70%;
     }
 
     /* Hamburger on navbar */
@@ -822,9 +822,8 @@
         }
     
         .navbar{
-            margin-top: 20px;
             display: flex;
-            align-items: center;
+            margin-top: 85px;
         }
     
         .navbar img{
