@@ -12,7 +12,7 @@ const client = sanityClient({
 
 /* Index Intro Information */
 
-if(window.location.href.indexOf('index') !== -1){
+
   const introInformationQuery = '*[_type == "introInformation"] | order(paragraphNumber)';
 
   function fetchIntroInformation(){
@@ -46,7 +46,6 @@ if(window.location.href.indexOf('index') !== -1){
   }
   
   fetchIntroInformation();
-}
 
 
 
@@ -134,8 +133,6 @@ if(window.location.href.indexOf('boardandemployees') !== -1){
 
 
 /* Join Information */ 
-let sliderLinks = document.getElementsByClassName('below-slider-links');
-if(sliderLinks.length > 0){
   const joinInformationQuery = '*[_type == "joinInformation"] | order(paragraphNumber)';
 
   function fetchJoinInformation(){
@@ -159,7 +156,7 @@ if(sliderLinks.length > 0){
   }
   
   fetchJoinInformation();
-}
+
 
 /* Join Youth Query */
 if(window.location.href.indexOf('joinYouth') !== -1){
@@ -485,7 +482,7 @@ if(window.location.href.indexOf('tournament') !== -1){
 
 
 /* Fetch Player Type Card */
-if(window.location.href.indexOf('index') !== -1){
+
   const playerTypeQuery = '*[_type == "playerType"] | order(cardNumber)';
 
   function fetchPlayerType(){
@@ -514,8 +511,7 @@ if(window.location.href.indexOf('index') !== -1){
   }
   
   fetchPlayerType();
-  
-}
+
 
 
 /* Sending Message Form */
