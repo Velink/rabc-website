@@ -87,11 +87,23 @@ if(window.location.href.indexOf('boardandemployees') !== -1){
   function fetchEmployeeInformation() {
     client.fetch(boardEmployeeInformation).then(response => {
         let k = -1;
+        let valuesArray = [];
         for (let j = 0; j < response.length; j++) {
-          let valuesArray = Object.values(response[j]);
-          for (let i = 9; i > 5; i--) {
-            k++;
-            document.querySelector(`#grid-card-${j} > #grid-card-info-${k}`).insertAdjacentHTML('beforeend', valuesArray[i]);
+          console.log('works ' + response[0].name)
+          valuesArray[0] = response[j].name
+          valuesArray[1] = response[j].position
+          valuesArray[2] = response[j].mobile
+          valuesArray[3] = response[j].email
+          console.log('wohoo ' + valuesArray);
+          // let valuesArray = Object.values(response[j]);
+          for (let i = 0; i < 4; i++) {
+            if(i < 4){
+              k++;
+            }
+            document.querySelector(`#grid-card-info-${k}`).insertAdjacentHTML('beforeend', valuesArray[i]);
+            // if(i == 4){
+            //   valuesArray = [];
+            // }
           }
         }
     })
