@@ -8,7 +8,7 @@
   "license": "UNLICENSED",
   "scripts": {
     "start": "node server.js",
-    "build": "sanity build",
+    "build": "sanity build --openssl-legacy-provider",
     "postinstall": "npm run build"
   },
   "keywords": [
