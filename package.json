@@ -6,9 +6,12 @@
   "main": "server.js",
   "author": "Velin Kalenderski <velinkalenderski@hotmail.co.uk>",
   "license": "UNLICENSED",
+  "engines": {
+    "node": "16.20.0"
+  },
   "scripts": {
     "start": "node server.js",
-    "build": "sanity build --openssl-legacy-provider",
+    "build": "sanity build",
     "postinstall": "npm run build"
   },
   "keywords": [
