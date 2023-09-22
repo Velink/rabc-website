@@ -150,9 +150,9 @@ if(window.location.href.indexOf('boardandemployees') !== -1){
   function fetchJoinInformation(){
     client.fetch(joinInformationQuery).then(response => {
         let j = 0;
-            // console.log(response);
-            for (let i = 0; i < response[2].information.length; i++) {
-              const introText = response[2].information[i].children[0].text;
+            console.log(response);
+            for (let i = 0; i < response[3].information.length; i++) {
+              const introText = response[3].information[i].children[0].text;
               if(i == 0){
                 const htmlRender = `<h2>${introText}</h2>` 
                 document.querySelector(`#intro-text-1`).insertAdjacentHTML('beforeend', htmlRender);   
@@ -170,32 +170,6 @@ if(window.location.href.indexOf('boardandemployees') !== -1){
   fetchJoinInformation();
 
 
-/* Join Youth Query */
-if(window.location.href.indexOf('joinYouth') !== -1){
-  /* Join Youth Information */
-  const joinInformationQuery = '*[_type == "joinInformation"] | order(paragraphNumber)';
-
-  function fetchJoinYouthInformation(){
-    client.fetch(joinInformationQuery).then(response => {
-            // console.log(response);
-            for (let i = 0; i < response[3].information.length; i++) {
-              const introText = response[3].information[i].children[0].text;
-              if(i == 0){
-                const htmlRender = `<h2>${introText}</h2>` 
-                document.querySelector(`#join-youth-intro`).insertAdjacentHTML('beforeend', htmlRender);   
-              } else { 
-                const htmlRender = `<p>${introText}</p>` 
-                document.querySelector(`#join-youth-intro`).insertAdjacentHTML('beforeend', htmlRender);   
-              }
-            }  
-    }).catch(error=> {
-      console.log(error);
-    })
-  }
-
-  fetchJoinYouthInformation();
-}
-
 /* Join Competitive Query */ 
 if(window.location.href.indexOf('joinCompetitive') !== -1){
   
@@ -204,8 +178,8 @@ if(window.location.href.indexOf('joinCompetitive') !== -1){
   function fetchJoinCompetitiveInformation(){
     client.fetch(joinInformationQuery).then(response => {
             // console.log(response);
-            for (let i = 0; i < response[4].information.length; i++) {
-              const introText = response[4].information[i].children[0].text;
+            for (let i = 0; i < response[2].information.length; i++) {
+              const introText = response[2].information[i].children[0].text;
               if(i == 0){
                 const htmlRender = `<h2>${introText}</h2>` 
                 document.querySelector(`#join-competitive-intro`).insertAdjacentHTML('beforeend', htmlRender);   
@@ -230,8 +204,8 @@ if(window.location.href.indexOf('joinRecreation') !== -1){
    function fetchJoinRecreationInformation(){
     client.fetch(joinInformationQuery).then(response => {
             // console.log(response);
-            for (let i = 0; i < response[5].information.length; i++) {
-              const introText = response[5].information[i].children[0].text;
+            for (let i = 0; i < response[1].information.length; i++) {
+              const introText = response[1].information[i].children[0].text;
               if(i == 0){
                 const htmlRender = `<h2>${introText}</h2>` 
                 document.querySelector(`#join-recreation-intro`).insertAdjacentHTML('beforeend', htmlRender);   
@@ -343,45 +317,6 @@ if(window.location.href.indexOf('playingmoments') !== -1){
   fetchPlayingMoments();
 }
 
-
-
-/* Youth Playing Moment Card */
-if(window.location.href.indexOf('joinYouth') !== -1){
-  const playingMomentsQuery2 = '*[_type == "playingCard"] | order(cardNumber)';
-
-  function fetchPlayingMoments2(){
-      client.fetch(playingMomentsQuery2).then(response => {
-          for(let j = 0; j < response.length; j++){
-            var introText = [];
-            // console.log(response);
-            for (let i = 0; i < response[j].information.length; i++) {
-              introText[i] = response[j].information[i].children[0].text;  
-            }
-            const htmlRender = `
-            <div class="grid-card">
-            <h3>${introText[0]}</h3>
-            <p>${introText[1]}</p>
-            <p>${introText[2]}</p>
-            <p>${introText[3]}</p>
-            <p>${introText[4]}</p>
-            <p>${introText[5]}</p>
-            <p>${introText[6]}</p>
-            </div>` 
-  
-             if(j == 5){
-                document.querySelector(`#youth-playing-card`).insertAdjacentHTML('beforeend', htmlRender); 
-             }
-          }
-      })
-      .catch(error=> {
-        console.log(error);
-      })
-  }
-  
-  fetchPlayingMoments2();
-}
-
-
 /* Competition Playing Card */
 if(window.location.href.indexOf('joinCompetitive') !== -1){
   const playingMomentsQuery3 = '*[_type == "playingCard"] | order(cardNumber)';
@@ -452,47 +387,6 @@ if(window.location.href.indexOf('joinRecreation') !== -1){
 }
 
 
-
-
-/* Tournament Information */ 
-if(window.location.href.indexOf('tournament') !== -1){
-  const tournamentInformationQuery = '*[_type == "tournamentInfo"]';
-
-  function fetchTournamentInformation(){
-      client.fetch(tournamentInformationQuery).then(response => {
-          const html = response.map(user =>{
-            // console.log(user);
-              for (let i = 0; i < user.information.length; i++) {
-                for(let j = 0; j < user.information[i].children.length; j++){
-                  const introText = user.information[i].children[j].text;  
-                  const htmlRender = introText;
-                  let k = 0;
-                    if(user.information[i].markDefs.length > 0 && user.information[i].markDefs[0]._type === 'link'){
-                      const htmlRender = `<a id=link-${k}>${introText}</a>`
-                      document.querySelector(`#tournament-intro-text`).insertAdjacentHTML('beforeend', htmlRender);
-                      document.getElementById(`link-${k}`).setAttribute("href", introText);
-                      document.getElementById(`link-${k}`).setAttribute("target", "_blank");
-                      k++;
-                  }
-  
-                  else if(user.information[i].markDefs.length <= 0){
-                      document.querySelector(`#tournament-intro-text`).insertAdjacentHTML('beforeend', htmlRender); 
-                  }
-                  // console.log(introText);
-                }
-              }
-          })
-      })
-      .catch(error=> {
-        console.log(error);
-      })
-  }
-  
-  fetchTournamentInformation();
-  
-}
-
-
 /* Fetch Player Type Card */
 
   const playerTypeQuery = '*[_type == "playerType"] | order(cardNumber)';
@@ -500,7 +394,6 @@ if(window.location.href.indexOf('tournament') !== -1){
   function fetchPlayerType(){
       let j = 1;
       let playerText = [];
-      let youthLink = '/joinYouth.html';
       let competitiveLink = '/joinCompetitive.html';
       let recreationLink = '/joinRecreation.html'
       client.fetch(playerTypeQuery).then(response => {
@@ -513,7 +406,6 @@ if(window.location.href.indexOf('tournament') !== -1){
             }
             j++;  
           })
-          document.getElementById('youth-learn-more').setAttribute("href", youthLink);
           document.getElementById('competitive-learn-more').setAttribute("href", competitiveLink);
           document.getElementById('recreation-learn-more').setAttribute("href", recreationLink);
       })
@@ -559,7 +451,7 @@ if(window.location.href.indexOf('tournament') !== -1){
 
 
 /* Query for PDF Files */ 
-if(window.location.href.indexOf('join') !== -1 && window.location.href.indexOf('Recreation') === -1 && window.location.href.indexOf('Competitive') === -1 && window.location.href.indexOf('Youth') === -1){
+if(window.location.href.indexOf('join') !== -1 && window.location.href.indexOf('Recreation') === -1 && window.location.href.indexOf('Competitive') === -1){
   const pdfFileQuery = '*[_type == "pdfFiles"]';
 
   function fetchPdfFile(){

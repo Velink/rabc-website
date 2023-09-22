@@ -52,22 +52,22 @@
 
 
  // /* Drop Down Menu UL-3 */ 
- const tournamentUL = document.getElementById('tournament-ul')
- const tournamentButton = document.getElementById('tournament-button') 
- tournamentButton.addEventListener('click', () => {
- tournamentButton.classList.toggle('border-outline')
- tournamentUL.classList.toggle('show');
- })
+//  const tournamentUL = document.getElementById('tournament-ul')
+//  const tournamentButton = document.getElementById('tournament-button') 
+//  tournamentButton.addEventListener('click', () => {
+//  tournamentButton.classList.toggle('border-outline')
+//  tournamentUL.classList.toggle('show');
+//  })
 
  
  /* Closing Drop-Down Menu UL-3 When user clicks outside of Menu for Mobile Layout */ 
- document.addEventListener("click", function(event){
-     if(event.target.closest('.drop-down-container')) return
-     if(tournamentUL.classList.contains('show')){
-     tournamentUL.classList.remove('show');
-     tournamentButton.classList.remove('border-outline')
-     } return
- })
+//  document.addEventListener("click", function(event){
+//      if(event.target.closest('.drop-down-container')) return
+//      if(tournamentUL.classList.contains('show')){
+//      tournamentUL.classList.remove('show');
+//      tournamentButton.classList.remove('border-outline')
+//      } return
+//  })
 
 
  // /* Drop Down Menu UL-4 */ 
